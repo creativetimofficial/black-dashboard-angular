@@ -1,25 +1,39 @@
 <footer class="footer">
-  <div class="row align-items-center justify-content-xl-between">
-    <div class="col-xl-6">
-      <div class="copyright text-center text-xl-left text-muted">
-        &copy; {{ test | date: "yyyy" }} <a href="https://www.creative-tim.com?ref=ada-footer-admin-layout" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
-      </div>
-    </div>
-    <div class="col-xl-6">
-      <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-        <li class="nav-item">
-          <a href="https://www.creative-tim.com?ref=ada-footer-admin-layout" class="nav-link" target="_blank">Creative Tim</a>
-        </li>
-        <li class="nav-item">
-          <a href="https://www.creative-tim.com/presentation?ref=ada-footer-admin-layout" class="nav-link" target="_blank">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a href="http://blog.creative-tim.com?ref=ada-footer-admin-layout" class="nav-link" target="_blank">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a href="https://github.com/creativetimofficial/argon-dashboard-angular/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-        </li>
+  <div class="container-fluid">
+    <nav>
+      <ul>
+        <li><a href="https://www.creative-tim.com"> Creative Tim </a></li>
+        <li><a href="https://www.creative-tim.com/about-us"> About Us </a></li>
+        <li><a href="http://blog.creative-tim.com"> Blog </a></li>
       </ul>
+    </nav>
+    <div class="copyright">
+      &copy; {{ test | date: "yyyy" }}, Designed by
+      <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded
+      by
+      <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+    </div>
+  </div>
+</footer>
+<footer class=" footer">
+  <div class=" container-fluid">
+    <ul class=" nav">
+      <li class=" nav-item">
+        <a class=" nav-link" href="https://www.creative-tim.com"> Creative Tim </a>
+      </li>
+      <li class=" nav-item">
+        <a class=" nav-link" href="https://www.creative-tim.com/about-us"> About Us </a>
+      </li>
+      <li class=" nav-item">
+        <a class=" nav-link" href="http://blog.creative-tim.com"> Blog </a>
+      </li>
+    </ul>
+    <div class=" copyright">
+      &copy;
+      {{ test | date: "yyyy" }}
+      made with <i class=" tim-icons icon-heart-2"> </i> by
+      <a href="https://www.creative-tim.com" target="_blank"> Creative Tim </a> for a
+      better web.
     </div>
   </div>
 </footer>

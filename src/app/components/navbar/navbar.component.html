@@ -1,59 +1,222 @@
-<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+<!-- <nav
+  class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top"
+>
   <div class="container-fluid">
-    <!-- Brand -->
-    <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" routerLinkActive="active" [routerLink]="['/dashboard']">{{getTitle()}}</a>
-    <!-- Form -->
-    <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-      <div class="form-group mb-0" [ngClass]="{ 'focused': focus === true }">
-        <div class="input-group input-group-alternative">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-search"></i></span>
-          </div>
-          <input class="form-control" placeholder="Search" type="text" (focus)="focus = true"
-          (blur)="focus = false">
-        </div>
+    <div class="navbar-wrapper">
+      <div class="navbar-toggle">
+        <button type="button" class="navbar-toggler" (click)="sidebarToggle()">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
       </div>
-    </form>
-    <!-- User -->
-    <ul class="navbar-nav align-items-center d-none d-md-flex">
-      <li class="nav-item" ngbDropdown placement="bottom-right">
-        <a class="nav-link pr-0" role="button" ngbDropdownToggle>
-          <div class="media align-items-center">
-            <span class="avatar avatar-sm rounded-circle">
-              <img alt="Image placeholder" src="assets/img/theme/team-4-800x800.jpg">
-            </span>
-            <div class="media-body ml-2 d-none d-lg-block">
-              <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+      <a class="navbar-brand" href="#pablo">{{ getTitle() }}</a>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="collapse()"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="collapseExample"
+    >
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="collapseExample"
+      [ngbCollapse]="isCollapsed"
+    >
+      <form>
+        <div class="input-group no-border">
+          <input
+            type="text"
+            value=""
+            class="form-control"
+            placeholder="Search..."
+          />
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <i class="now-ui-icons ui-1_zoom-bold"></i>
             </div>
           </div>
-        </a>
-        <div class="dropdown-menu-arrow dropdown-menu-right" ngbDropdownMenu>
-          <div class=" dropdown-header noti-title">
-            <h6 class="text-overflow m-0">Welcome!</h6>
-          </div>
-          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
-            <i class="ni ni-single-02"></i>
-            <span>My profile</span>
-          </a>
-          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
-            <i class="ni ni-settings-gear-65"></i>
-            <span>Settings</span>
-          </a>
-          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
-            <i class="ni ni-calendar-grid-58"></i>
-            <span>Activity</span>
-          </a>
-          <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
-            <i class="ni ni-support-16"></i>
-            <span>Support</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#!" class="dropdown-item">
-            <i class="ni ni-user-run"></i>
-            <span>Logout</span>
-          </a>
         </div>
-      </li>
-    </ul>
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#pablo">
+            <i class="now-ui-icons media-2_sound-wave"></i>
+            <p><span class="d-lg-none d-md-block">Stats</span></p>
+          </a>
+        </li>
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>
+            <i class="now-ui-icons location_world"></i>
+            <p><span class="d-lg-none d-md-block">Some Actions</span></p>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            ngbDropdownMenu
+            aria-labelledby="dropdownBasic1"
+          >
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pablo">
+            <i class="now-ui-icons users_single-02"></i>
+            <p><span class="d-lg-none d-md-block">Account</span></p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<nav class=" navbar navbar-expand-lg navbar-absolute navbar-transparent">
+  <div class=" container-fluid">
+    <div class=" navbar-wrapper">
+      <div class=" navbar-toggle d-inline">
+        <button class=" navbar-toggler" type="button">
+          <span class=" navbar-toggler-bar bar1"> </span>
+          <span class=" navbar-toggler-bar bar2"> </span>
+          <span class=" navbar-toggler-bar bar3"> </span>
+        </button>
+      </div>
+      <a class=" navbar-brand" href="javascript:void(0)"> Dashboard </a>
+    </div>
+    <button
+      aria-label="Toggle navigation"
+      class=" navbar-toggler"
+      [attr.aria-expanded]="!isCollapsed"
+      (click)="isCollapsed = !isCollapsed"
+      id="navigation"
+      type="button"
+    >
+      <span class=" navbar-toggler-bar navbar-kebab"> </span>
+      <span class=" navbar-toggler-bar navbar-kebab"> </span>
+      <span class=" navbar-toggler-bar navbar-kebab"> </span>
+    </button>
+    <div
+      class=" navbar-collapse"
+      [ngbCollapse]="isCollapsed"
+      id="navigation"
+    >
+      <ul class=" navbar-nav ml-auto">
+        <li class=" search-bar input-group">
+          <button
+            class=" btn btn-link"
+            data-target="#searchModal"
+            data-toggle="modal"
+            id="search-button"
+          >
+            <i class=" tim-icons icon-zoom-split"> </i>
+            <span class=" d-lg-none d-md-block"> Search </span>
+          </button>
+        </li>
+        <li class=" nav-item" ngbDropdown>
+          <a
+            class=" nav-link"
+            data-toggle="dropdown"
+            href="javascript:void(0)"
+            ngbDropdownToggle
+          >
+            <div class=" notification d-none d-lg-block d-xl-block"></div>
+            <i class=" tim-icons icon-sound-wave"> </i>
+            <p class=" d-lg-none">Notifications</p>
+          </a>
+          <ul class=" dropdown-menu-right dropdown-navbar" ngbDropdownMenu>
+            <li class=" nav-link">
+              <a class=" nav-item" href="#" ngbDropdownItem>
+                Mike John responded to your email
+              </a>
+            </li>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                You have 5 more tasks
+              </a>
+            </li>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                Your friend Michael is in town
+              </a>
+            </li>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                Another notification
+              </a>
+            </li>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                Another one
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class=" nav-item" ngbDropdown>
+          <a
+            class=" nav-link"
+            data-toggle="dropdown"
+            href="#"
+            ngbDropdownToggle
+          >
+            <div class=" photo">
+              <img alt="Profile Photo" src="../assets/img/anime3.png" />
+            </div>
+            <b class=" caret d-none d-lg-block d-xl-block"> </b>
+            <p class=" d-lg-none">Log out</p>
+          </a>
+          <ul class=" dropdown-navbar" ngbDropdownMenu>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                Profile
+              </a>
+            </li>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                Settings
+              </a>
+            </li>
+            <li class=" dropdown-divider"></li>
+            <li class=" nav-link">
+              <a
+                class=" nav-item"
+                href="javascript:void(0)"
+                ngbDropdownItem
+              >
+                Log out
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class=" separator d-lg-none"></li>
+      </ul>
+    </div>
   </div>
 </nav>

@@ -1,11 +1,78 @@
-<!-- Sidenav -->
-<app-sidebar></app-sidebar>
-<div class="main-content">
-  <!-- Top navbar -->
-  <app-navbar></app-navbar>
-  <!-- Pages -->
-  <router-outlet></router-outlet>
-  <div class="container-fluid">
+<div class="wrapper">
+  <div class="sidebar"><app-sidebar></app-sidebar></div>
+  <div class="main-panel">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
     <app-footer></app-footer>
+  </div>
+</div>
+<div class=" fixed-plugin">
+  <div class=" show-dropdown" ngbDropdown>
+    <a data-toggle="dropdown" href="#" ngbDropdownToggle>
+      <i class=" fa fa-cog fa-2x"> </i>
+    </a>
+    <ul ngbDropdownMenu>
+      <li class=" header-title">Sidebar Background</li>
+      <li class=" adjustments-line">
+        <a class=" switch-trigger background-color" href="javascript:void(0)">
+          <div class=" badge-colors text-center">
+            <span
+              class=" badge filter badge-primary active"
+              data-color="primary"
+            >
+            </span>
+            <span class=" badge filter badge-info" data-color="blue"> </span>
+            <span class=" badge filter badge-success" data-color="green">
+            </span>
+          </div>
+          <div class=" clearfix"></div>
+        </a>
+      </li>
+      <li class=" adjustments-line text-center color-change">
+        <span class=" color-label"> LIGHT MODE </span>
+        <span class=" badge light-badge mr-2"> </span>
+        <span class=" badge dark-badge ml-2"> </span>
+        <span class=" color-label"> DARK MODE </span>
+      </li>
+      <li class=" button-container">
+        <a
+          class=" btn btn-primary btn-block btn-round"
+          href="https://www.creative-tim.com/product/black-dashboard"
+          target="_blank"
+        >
+          Download Now
+        </a>
+        <a
+          class=" btn btn-default btn-block btn-round"
+          href="https://demos.creative-tim.com/black-dashboard/docs/1.0/getting-started/introduction.html"
+          target="_blank"
+        >
+          Documentation
+        </a>
+      </li>
+      <li class=" header-title">Thank you for 95 shares!</li>
+      <li class=" button-container text-center">
+        <button class=" btn btn-round btn-info" id="twitter">
+          <i class=" fab fa-twitter"> </i> · 45
+        </button>
+        <button class=" btn btn-round btn-info" id="facebook">
+          <i class=" fab fa-facebook-f"> </i> · 50
+        </button>
+        <br />
+
+        <br />
+
+        <a
+          aria-label="Star ntkme/github-buttons on GitHub"
+          class=" github-button"
+          data-icon="octicon-star"
+          data-show-count="true"
+          data-size="large"
+          href="https://github.com/creativetimofficial/black-dashboard"
+        >
+          Star
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
