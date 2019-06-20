@@ -1,11 +1,76 @@
 import { Component, OnInit } from "@angular/core";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-notifications",
   templateUrl: "notifications.component.html"
 })
 export class NotificationsComponent implements OnInit {
-  constructor() {}
+  staticAlertClosed  = false;
+  staticAlertClosed1 = false;
+  staticAlertClosed2 = false;
+  staticAlertClosed3 = false;
+  staticAlertClosed4 = false;
+  staticAlertClosed5 = false;
+  staticAlertClosed6 = false;
+  staticAlertClosed7 = false;
+
+  constructor(private toastr: ToastrService) {}
+
+  showNotification(from, align){
+
+      const color = Math.floor((Math.random() * 5) + 1);
+
+      switch(color){
+        case 1:
+        this.toastr.info('<span class="tim-icons icon-bell-55"></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
+           timeOut: 80000,
+           closeButton: true,
+           enableHtml: true,
+           toastClass: "alert alert-info alert-with-icon",
+           positionClass: 'toast-' + from + '-' +  align
+         });
+        break;
+        case 2:
+        this.toastr.success('<span class="now-ui-icons ui-1_bell-53"></span> Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer.', '', {
+           timeOut: 80000,
+           closeButton: true,
+           enableHtml: true,
+           toastClass: "alert alert-success alert-with-icon",
+           positionClass: 'toast-' + from + '-' +  align
+         });
+        break;
+        case 3:
+        this.toastr.warning('<span class="now-ui-icons ui-1_bell-53"></span> Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer.', '', {
+           timeOut: 80000,
+           closeButton: true,
+           enableHtml: true,
+           toastClass: "alert alert-warning alert-with-icon",
+           positionClass: 'toast-' + from + '-' +  align
+         });
+        break;
+        case 4:
+        this.toastr.error('<span class="now-ui-icons ui-1_bell-53"></span> Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer.', '', {
+           timeOut: 80000,
+           enableHtml: true,
+           closeButton: true,
+           toastClass: "alert alert-danger alert-with-icon",
+           positionClass: 'toast-' + from + '-' +  align
+         });
+         break;
+         case 5:
+         this.toastr.show('<span class="now-ui-icons ui-1_bell-53"></span> Welcome to <b>Now Ui Dashboard</b> - a beautiful freebie for every web developer.', '', {
+            timeOut: 80000,
+            closeButton: true,
+            enableHtml: true,
+            toastClass: "alert alert-primary alert-with-icon",
+            positionClass: 'toast-' + from + '-' +  align
+          });
+        break;
+        default:
+        break;
+      }
+  }
 
   ngOnInit() {}
 }

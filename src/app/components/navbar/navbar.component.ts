@@ -43,7 +43,6 @@ export class NavbarComponent implements OnInit {
   collapse() {
     this.isCollapsed = !this.isCollapsed;
     const navbar = document.getElementsByTagName("nav")[0];
-    console.log(navbar);
     if (!this.isCollapsed) {
       navbar.classList.remove("navbar-transparent");
       navbar.classList.add("bg-white");
@@ -148,9 +147,8 @@ export class NavbarComponent implements OnInit {
   getTitle() {
     var titlee = this.location.prepareExternalUrl(this.location.path());
     if (titlee.charAt(0) === "#") {
-      titlee = titlee.slice(2);
+      titlee = titlee.slice(1);
     }
-    titlee = titlee.split("/").pop();
 
     for (var item = 0; item < this.listTitles.length; item++) {
       if (this.listTitles[item].path === titlee) {

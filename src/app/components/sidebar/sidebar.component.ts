@@ -7,39 +7,44 @@ declare interface RouteInfo {
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  { path: "/dashboard", title: "Dashboard", icon: "design_app", class: "" },
-  { path: "/icons", title: "Icons", icon: "education_atom", class: "" },
-  { path: "/maps", title: "Maps", icon: "location_map-big", class: "" },
+  {
+    path: "/dashboard",
+    title: "Dashboard",
+    icon: "icon-chart-pie-36",
+    class: ""
+  },
+  { path: "/icons", title: "Icons", icon: "icon-atom", class: "" },
+  { path: "/maps", title: "Maps", icon: "icon-pin", class: "" },
   {
     path: "/notifications",
     title: "Notifications",
-    icon: "ui-1_bell-53",
+    icon: "icon-bell-55",
     class: ""
   },
 
   {
-    path: "/user-profile",
+    path: "/user",
     title: "User Profile",
-    icon: "users_single-02",
+    icon: "icon-single-02",
     class: ""
   },
   {
-    path: "/table-list",
+    path: "/tables",
     title: "Table List",
-    icon: "design_bullet-list-67",
+    icon: "icon-puzzle-10",
     class: ""
   },
   {
     path: "/typography",
     title: "Typography",
-    icon: "text_caps-small",
+    icon: "icon-align-center",
     class: ""
   },
   {
-    path: "/upgrade",
-    title: "Upgrade to PRO",
-    icon: "objects_spaceship",
-    class: "active active-pro"
+    path: "/rtl",
+    title: "RTL Support",
+    icon: "icon-world",
+    class: ""
   }
 ];
 

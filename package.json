@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/router": "8.0.2",
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "core-js": "3.1.4",
+    "ngx-toastr": "^10.0.4",
     "rxjs": "6.5.2",
     "tslib": "1.10.0",
     "zone.js": "0.9.1"

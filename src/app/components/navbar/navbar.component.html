@@ -1,85 +1,8 @@
-<!-- <nav
-  class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top"
->
-  <div class="container-fluid">
-    <div class="navbar-wrapper">
-      <div class="navbar-toggle">
-        <button type="button" class="navbar-toggler" (click)="sidebarToggle()">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </button>
-      </div>
-      <a class="navbar-brand" href="#pablo">{{ getTitle() }}</a>
-    </div>
-    <button
-      class="navbar-toggler"
-      type="button"
-      (click)="collapse()"
-      [attr.aria-expanded]="!isCollapsed"
-      aria-controls="collapseExample"
-    >
-      <span class="navbar-toggler-bar navbar-kebab"></span>
-      <span class="navbar-toggler-bar navbar-kebab"></span>
-      <span class="navbar-toggler-bar navbar-kebab"></span>
-    </button>
-    <div
-      class="collapse navbar-collapse justify-content-end"
-      id="collapseExample"
-      [ngbCollapse]="isCollapsed"
-    >
-      <form>
-        <div class="input-group no-border">
-          <input
-            type="text"
-            value=""
-            class="form-control"
-            placeholder="Search..."
-          />
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <i class="now-ui-icons ui-1_zoom-bold"></i>
-            </div>
-          </div>
-        </div>
-      </form>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#pablo">
-            <i class="now-ui-icons media-2_sound-wave"></i>
-            <p><span class="d-lg-none d-md-block">Stats</span></p>
-          </a>
-        </li>
-        <li class="nav-item" ngbDropdown>
-          <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>
-            <i class="now-ui-icons location_world"></i>
-            <p><span class="d-lg-none d-md-block">Some Actions</span></p>
-          </a>
-          <div
-            class="dropdown-menu dropdown-menu-right"
-            ngbDropdownMenu
-            aria-labelledby="dropdownBasic1"
-          >
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#pablo">
-            <i class="now-ui-icons users_single-02"></i>
-            <p><span class="d-lg-none d-md-block">Account</span></p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
 <nav class=" navbar navbar-expand-lg navbar-absolute navbar-transparent">
   <div class=" container-fluid">
     <div class=" navbar-wrapper">
       <div class=" navbar-toggle d-inline">
-        <button class=" navbar-toggler" type="button">
+        <button class=" navbar-toggler" type="button" (click)="sidebarToggle()">
           <span class=" navbar-toggler-bar bar1"> </span>
           <span class=" navbar-toggler-bar bar2"> </span>
           <span class=" navbar-toggler-bar bar3"> </span>
@@ -90,8 +13,9 @@
     <button
       aria-label="Toggle navigation"
       class=" navbar-toggler"
+      (click)="collapse()"
       [attr.aria-expanded]="!isCollapsed"
-      (click)="isCollapsed = !isCollapsed"
+      aria-controls="collapseExample"
       id="navigation"
       type="button"
     >
@@ -99,11 +23,7 @@
       <span class=" navbar-toggler-bar navbar-kebab"> </span>
       <span class=" navbar-toggler-bar navbar-kebab"> </span>
     </button>
-    <div
-      class=" navbar-collapse"
-      [ngbCollapse]="isCollapsed"
-      id="navigation"
-    >
+    <div class=" navbar-collapse" [ngbCollapse]="isCollapsed" id="navigation">
       <ul class=" navbar-nav ml-auto">
         <li class=" search-bar input-group">
           <button
@@ -120,7 +40,7 @@
           <a
             class=" nav-link"
             data-toggle="dropdown"
-            href="javascript:void(0)"
+            href="#pablo"
             ngbDropdownToggle
           >
             <div class=" notification d-none d-lg-block d-xl-block"></div>
@@ -134,38 +54,22 @@
               </a>
             </li>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 You have 5 more tasks
               </a>
             </li>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 Your friend Michael is in town
               </a>
             </li>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 Another notification
               </a>
             </li>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 Another one
               </a>
             </li>
@@ -175,7 +79,7 @@
           <a
             class=" nav-link"
             data-toggle="dropdown"
-            href="#"
+            href="#asd"
             ngbDropdownToggle
           >
             <div class=" photo">
@@ -186,30 +90,18 @@
           </a>
           <ul class=" dropdown-navbar" ngbDropdownMenu>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 Profile
               </a>
             </li>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 Settings
               </a>
             </li>
             <li class=" dropdown-divider"></li>
             <li class=" nav-link">
-              <a
-                class=" nav-item"
-                href="javascript:void(0)"
-                ngbDropdownItem
-              >
+              <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
                 Log out
               </a>
             </li>
