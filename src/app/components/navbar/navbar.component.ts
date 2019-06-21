@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from "@angular/core";
+import { Component, OnInit, ElementRef, OnDestroy } from "@angular/core";
 import { ROUTES } from "../sidebar/sidebar.component";
 import { Location } from "@angular/common";
 import { Router } from "@angular/router";
@@ -9,7 +9,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: "./navbar.component.html",
   styleUrls: ["./navbar.component.css"]
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   private listTitles: any[];
   location: Location;
   mobile_menu_visible: any = 0;
@@ -29,8 +29,19 @@ export class NavbarComponent implements OnInit {
     this.location = location;
     this.sidebarVisible = false;
   }
-
+  // function that adds color white/transparent to the navbar on resize (this is for the collapse)
+   updateColor = () => {
+   var navbar = document.getElementsByClassName('navbar')[0];
+     if (window.innerWidth < 993 && !this.isCollapsed) {
+       navbar.classList.add('bg-white');
+       navbar.classList.remove('navbar-transparent');
+     } else {
+       navbar.classList.remove('bg-white');
+       navbar.classList.add('navbar-transparent');
+     }
+   };
   ngOnInit() {
+    window.addEventListener("resize", this.updateColor);
     this.listTitles = ROUTES.filter(listTitle => listTitle);
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName("navbar-toggler")[0];
@@ -178,5 +189,8 @@ export class NavbarComponent implements OnInit {
     } else {
       return  `with: ${reason}`;
     }
+  }
+  ngOnDestroy(){
+     window.removeEventListener("resize", this.updateColor);
   }
 }
