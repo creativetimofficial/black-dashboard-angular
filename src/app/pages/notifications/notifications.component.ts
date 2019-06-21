@@ -23,7 +23,7 @@ export class NotificationsComponent implements OnInit {
 
       switch(color){
         case 1:
-        this.toastr.info('<span class="tim-icons icon-bell-55" data-notify="icon"></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
+        this.toastr.info('<span class="tim-icons icon-bell-55" ></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
            timeOut: 80000,
            closeButton: true,
            enableHtml: true,
@@ -32,7 +32,7 @@ export class NotificationsComponent implements OnInit {
          });
         break;
         case 2:
-        this.toastr.success('<span class="tim-icons icon-bell-55" data-notify="icon"></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
+        this.toastr.success('<span class="tim-icons icon-bell-55" ></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
            timeOut: 80000,
            closeButton: true,
            enableHtml: true,
@@ -41,7 +41,7 @@ export class NotificationsComponent implements OnInit {
          });
         break;
         case 3:
-        this.toastr.warning('<span class="tim-icons icon-bell-55" data-notify="icon"></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
+        this.toastr.warning('<span class="tim-icons icon-bell-55" ></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
            timeOut: 80000,
            closeButton: true,
            enableHtml: true,
@@ -50,7 +50,7 @@ export class NotificationsComponent implements OnInit {
          });
         break;
         case 4:
-        this.toastr.error('<span class="tim-icons icon-bell-55" data-notify="icon"></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
+        this.toastr.error('<span class="tim-icons icon-bell-55" ></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
            timeOut: 80000,
            enableHtml: true,
            closeButton: true,
@@ -59,7 +59,7 @@ export class NotificationsComponent implements OnInit {
          });
          break;
          case 5:
-         this.toastr.show('<span class="tim-icons icon-bell-55" data-notify="icon"></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
+         this.toastr.show('<span class="tim-icons icon-bell-55" ></span> Welcome to <b>Black Dashboard Angular</b> - a beautiful freebie for every web developer.', '', {
             timeOut: 80000,
             closeButton: true,
             enableHtml: true,
