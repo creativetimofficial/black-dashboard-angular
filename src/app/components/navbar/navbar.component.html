@@ -30,6 +30,7 @@
             class=" btn btn-link"
             data-target="#searchModal"
             data-toggle="modal"
+            (click)="open(content)"
             id="search-button"
           >
             <i class=" tim-icons icon-zoom-split"> </i>
@@ -113,33 +114,24 @@
   </div>
 </nav>
 
-<div
-  aria-hidden="true"
-  aria-labelledby="searchModal"
-  class=" modal modal-search fade"
-  id="searchModal"
-  role="dialog"
-  tabindex="-1"
->
-  <div class=" modal-dialog" role="document">
-    <div class=" modal-content">
-      <div class=" modal-header">
-        <input
-          class=" form-control"
-          id="inlineFormInputGroup"
-          placeholder="SEARCH"
-          type="text"
-        />
+<ng-template #content let-modal>
+  <div class=" modal-header">
+    <input
+      class=" form-control"
+      id="inlineFormInputGroup"
+      placeholder="SEARCH"
+      type="text"
+    />
 
-        <button
-          aria-label="Close"
-          class=" close"
-          data-dismiss="modal"
-          type="button"
-        >
-          <i class=" tim-icons icon-simple-remove"> </i>
-        </button>
-      </div>
-    </div>
+    <button
+      aria-label="Close"
+      class=" close"
+      data-dismiss="modal"
+      type="button"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <i class=" tim-icons icon-simple-remove"> </i>
+    </button>
   </div>
-</div>
+
+</ng-template>

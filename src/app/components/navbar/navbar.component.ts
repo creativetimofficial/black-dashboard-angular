@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef } from "@angular/core";
 import { ROUTES } from "../sidebar/sidebar.component";
 import { Location } from "@angular/common";
 import { Router } from "@angular/router";
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: "app-navbar",
@@ -17,10 +18,13 @@ export class NavbarComponent implements OnInit {
 
   public isCollapsed = true;
 
+  closeResult: string;
+
   constructor(
     location: Location,
     private element: ElementRef,
-    private router: Router
+    private router: Router,
+    private modalService: NgbModal
   ) {
     this.location = location;
     this.sidebarVisible = false;
@@ -156,5 +160,23 @@ export class NavbarComponent implements OnInit {
       }
     }
     return "Dashboard";
+  }
+
+  open(content) {
+    this.modalService.open(content, {windowClass: 'modal-search'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
 }
