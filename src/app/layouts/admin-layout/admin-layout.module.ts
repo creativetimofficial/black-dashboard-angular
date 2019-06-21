@@ -15,7 +15,6 @@ import { TypographyComponent } from "../../pages/typography/typography.component
 import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
@@ -24,7 +23,6 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    ToastrModule.forRoot()
   ],
   declarations: [
     DashboardComponent,
