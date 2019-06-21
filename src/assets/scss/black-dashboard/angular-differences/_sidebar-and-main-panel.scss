@@ -29,4 +29,7 @@
   &, &[data="red"]{
     @include linear-gradient($danger-states, $danger);
   }
+  &[data="primary"]{
+    @include linear-gradient($primary-states, $primary);
+  }
 }

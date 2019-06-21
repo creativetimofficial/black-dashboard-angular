@@ -1,33 +1,4 @@
-<div
-  aria-hidden="true"
-  aria-labelledby="searchModal"
-  class=" modal modal-search fade"
-  id="searchModal"
-  role="dialog"
-  tabindex="-1"
->
-  <div class=" modal-dialog" role="document">
-    <div class=" modal-content">
-      <div class=" modal-header">
-        <input
-          class=" form-control"
-          id="inlineFormInputGroup"
-          placeholder="SEARCH"
-          type="text"
-        />
 
-        <button
-          aria-label="Close"
-          class=" close"
-          data-dismiss="modal"
-          type="button"
-        >
-          <i class=" tim-icons icon-simple-remove"> </i>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 <div class=" content">
   <div class=" row">
     <div class=" col-12">
@@ -43,7 +14,7 @@
                 class=" btn-group btn-group-toggle float-right"
                 data-toggle="buttons"
               >
-                <label class=" btn btn-sm btn-primary btn-simple active" id="0">
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
                   <input checked="checked" name="options" type="radio" />
 
                   <span
@@ -55,7 +26,7 @@
                     <i class=" tim-icons icon-single-02"> </i>
                   </span>
                 </label>
-                <label class=" btn btn-sm btn-primary btn-simple" id="1">
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
                   <input
                     class=" d-none d-sm-none"
                     name="options"
@@ -71,7 +42,7 @@
                     <i class=" tim-icons icon-gift-2"> </i>
                   </span>
                 </label>
-                <label class=" btn btn-sm btn-primary btn-simple" id="2">
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[2];updateOptions();clicked=false;clicked1=false;clicked2=true" [ngClass]="{'active':clicked2===true}">
                   <input class=" d-none" name="options" type="radio" />
 
                   <span
@@ -99,11 +70,11 @@
         <div class=" card-header">
           <h5 class=" card-category">Total Shipments</h5>
           <h3 class=" card-title">
-            <i class=" tim-icons icon-bell-55 text-primary"> </i> 763,215
+            <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
           </h3>
         </div>
         <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLinePurple"> </canvas></div>
+          <div class=" chart-area"><canvas id="chartLineRed"> </canvas></div>
         </div>
       </div>
     </div>
@@ -112,7 +83,7 @@
         <div class=" card-header">
           <h5 class=" card-category">Daily Sales</h5>
           <h3 class=" card-title">
-            <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500â¬
+            <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500€
           </h3>
         </div>
         <div class=" card-body">

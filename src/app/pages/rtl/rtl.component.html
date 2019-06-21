@@ -1,317 +1,232 @@
 
-<div class=" content">
-  <div class=" row">
-    <div class=" col-12">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <div class=" row">
-            <div class=" col-sm-6 text-right">
-              <h5 class=" card-category">ÙØ¬ÙÙØ¹ Ø§ÙØ´Ø­ÙØ§Øª</h5>
-              <h2 class=" card-title">Ø£Ø¯Ø§Ø¡</h2>
+<div class="content">
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-chart">
+        <div class="card-header ">
+          <div class="row">
+            <div class="col-sm-6 text-right">
+              <h5 class="card-category">مجموع الشحنات</h5>
+              <h2 class="card-title">أداء</h2>
             </div>
-            <div class=" col-sm-6">
-              <div class=" btn-group btn-group-toggle" data-toggle="buttons">
-                <label class=" btn btn-sm btn-primary btn-simple active" id="0">
-                  <input checked="checked" name="options" type="radio" />
-
-                  <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                  >
-                    Ø­Ø³Ø§Ø¨Ø§Øª
-                  </span>
-                  <span class=" d-block d-sm-none">
-                    <i class=" tim-icons icon-single-02"> </i>
+            <div class="col-sm-6">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-sm btn-danger btn-simple active"  (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
+                  <input type="radio" name="options" checked>
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block"> حسابات</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-single-02"></i>
                   </span>
                 </label>
-                <label class=" btn btn-sm btn-primary btn-simple" id="1">
-                  <input
-                    class=" d-none d-sm-none"
-                    name="options"
-                    type="radio"
-                  />
-
-                  <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                  >
-                    Ø§ÙÙØ´ØªØ±ÙØ§Øª
-                  </span>
-                  <span class=" d-block d-sm-none">
-                    <i class=" tim-icons icon-gift-2"> </i>
+                <label class="btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
+                  <input type="radio" class="d-none d-sm-none" name="options">
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block"> المشتريات</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-gift-2"></i>
                   </span>
                 </label>
-                <label class=" btn btn-sm btn-primary btn-simple" id="2">
-                  <input class=" d-none" name="options" type="radio" />
-
-                  <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                  >
-                    Ø¬ÙØ³Ø§Øª
-                  </span>
-                  <span class=" d-block d-sm-none">
-                    <i class=" tim-icons icon-tap-02"> </i>
+                <label class="btn btn-sm btn-danger btn-simple" (click)="data=datasets[2];updateOptions();clicked=false;clicked1=false;clicked2=true" [ngClass]="{'active':clicked2===true}">
+                  <input type="radio" class="d-none" name="options">
+                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">جلسات</span>
+                  <span class="d-block d-sm-none">
+                    <i class="tim-icons icon-tap-02"></i>
                   </span>
                 </label>
               </div>
             </div>
           </div>
         </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartBig1"> </canvas></div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="chartBig1"></canvas>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class=" row">
-    <div class=" col-lg-4 text-right">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Ø´Ø­ÙØ§Øª ÙØ§ÙÙØ©</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-bell-55 text-primary"> </i> 763,215
-          </h3>
+  <div class="row">
+    <div class="col-lg-4 text-right">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">شحنات كاملة</h5>
+          <h3 class="card-title"><i class="tim-icons icon-bell-55 text-danger-states"></i> 763,215</h3>
         </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLinePurple"> </canvas></div>
-        </div>
-      </div>
-    </div>
-    <div class=" col-lg-4 text-right">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Ø§ÙÙØ¨ÙØ¹Ø§Øª Ø§ÙÙÙÙÙØ©</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500â¬
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="CountryChart"> </canvas></div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="chartLineRed"></canvas>
+          </div>
         </div>
       </div>
     </div>
-    <div class=" col-lg-4 text-right">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Ø§ÙÙÙØ§Ù Ø§ÙÙÙØªÙÙØ©</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-send text-success"> </i> 12,100K
-          </h3>
+    <div class="col-lg-4 text-right">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">المبيعات اليومية</h5>
+          <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500€</h3>
         </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="CountryChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 text-right">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">المهام المكتملة</h5>
+          <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 12,100K</h3>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="chartLineGreen"></canvas>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class=" row">
-    <div class=" col-lg-6 col-sm-6 text-center">
-      <div class=" card card-tasks text-left">
-        <div class=" card-header text-right">
-          <h6 class=" title d-inline">ØªØªØ¨Ø¹</h6>
-          <p class=" card-category d-inline">Ø§ÙÙÙÙ</p>
+  <div class="row">
+    <div class="col-lg-6 col-sm-6 text-center">
+      <div class="card  card-tasks text-left">
+        <div class="card-header text-right">
+          <h6 class="title d-inline">تتبع</h6>
+          <p class="card-category d-inline">اليوم</p>
           <div class=" float-left" ngbDropdown>
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class=" btn btn-link"
-              data-toggle="dropdown"
-              id="dropdownMenuLink"
-              ngbDropdownToggle
-            >
-              <i class=" tim-icons icon-settings-gear-63"> </i>
-            </a>
-            <div aria-labelledby="dropdownMenuLink" ngbDropdownMenu>
-              <a href="#" ngbDropdownItem> Ø¹ÙÙ </a>
-              <a href="#" ngbDropdownItem> Ø¹ÙÙ Ø¢Ø®Ø± </a>
-              <a href="#" ngbDropdownItem> Ø´ÙØ¡ Ø¢Ø®Ø± ÙÙØ§ </a>
+            <a class="btn btn-link" ngbDropdownToggle id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="tim-icons icon-settings-gear-63"></i></a>
+            <div ngbDropdownMenu aria-labelledby="dropdownMenuLink">
+              <a  href="javascript:void(0)" ngbDropdownItem>عمل</a>
+              <a  href="javascript:void(0" ngbDropdownItem>عمل آخر</a>
+              <a  href="javascript:void(0" ngbDropdownItem>شيء آخر هنا</a>
             </div>
           </div>
         </div>
-        <div class=" card-body">
-          <div class=" table-full-width table-responsive">
-            <table class=" table">
+        <div class="card-body ">
+          <div class="table-full-width table-responsive">
+            <table class="table">
               <tbody>
                 <tr>
-                  <td class=" text-center">
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          checked="checked"
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
+                  <td class="text-center">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" checked>
+                        <span class="form-check-sign">
+                          <span class="check"></span>
                         </span>
                       </label>
                     </div>
                   </td>
-                  <td class=" text-right">
-                    <p class=" title">ÙØ±ÙØ² ÙØ¹Ø§ÙØ¬Ø© ÙÙÙØ¹ ÙØ­ÙØ±</p>
-                    <p class=" text-muted">ÙØµ Ø¢Ø®Ø± ÙÙØ§Ø§ÙÙØ«Ø§Ø¦Ù</p>
+                  <td class="text-right">
+                    <p class="title">مركز معالجة موقع محور</p>
+                    <p class="text-muted">نص آخر هناالوثائق</p>
                   </td>
-                  <td class=" td-actions">
-                    <button class=" btn btn-link" type="button">
-                      <i class=" tim-icons icon-settings"> </i>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                      <i class="tim-icons icon-settings"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <td class=" text-center">
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
+                  <td class="text-center">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-sign">
+                          <span class="check"></span>
                         </span>
                       </label>
                     </div>
                   </td>
-                  <td class=" text-right">
-                    <p class=" title">ÙØ§ÙØªØ«Ø§Ù GDPR</p>
-                    <p class=" text-muted">
-                      Ø§ÙÙØ§ØªØ¬ Ø§ÙÙØ­ÙÙ Ø§ÙØ¥Ø¬ÙØ§ÙÙ ÙÙ ÙØ¸Ø§Ù ÙØªØ·ÙØ¨ ÙÙ
-                      Ø§ÙØ´Ø±ÙØ§Øª Ø­ÙØ§ÙØ© Ø§ÙØ¨ÙØ§ÙØ§Øª Ø§ÙØ´Ø®ØµÙØ©
-                      ÙØ§ÙØ®ØµÙØµÙØ© ÙÙÙØ§Ø·ÙÙ Ø£ÙØ±ÙØ¨Ø§ Ø¨Ø§ÙÙØ³Ø¨Ø©
-                      ÙÙÙØ¹Ø§ÙÙØ§Øª Ø§ÙØªÙ ØªØªÙ Ø¯Ø§Ø®Ù Ø§ÙØ¯ÙÙ Ø§ÙØ£Ø¹Ø¶Ø§Ø¡
-                      ÙÙ Ø§ÙØ§ØªØ­Ø§Ø¯ Ø§ÙØ£ÙØ±ÙØ¨Ù.
-                    </p>
+                  <td class="text-right">
+                    <p class="title">لامتثال GDPR</p>
+                    <p class="text-muted">الناتج المحلي الإجمالي هو نظام يتطلب من الشركات حماية البيانات الشخصية والخصوصية لمواطني أوروبا بالنسبة للمعاملات التي تتم داخل الدول الأعضاء في الاتحاد الأوروبي.</p>
                   </td>
-                  <td class=" td-actions">
-                    <button class=" btn btn-link" type="button">
-                      <i class=" tim-icons icon-settings"> </i>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                      <i class="tim-icons icon-settings"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <td class=" text-center">
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
+                  <td class="text-center">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-sign">
+                          <span class="check"></span>
                         </span>
                       </label>
                     </div>
                   </td>
-                  <td class=" text-right">
-                    <p class=" title">Ø§ÙÙØ¶Ø§ÙØ§Ø§ÙÙØ¶Ø§ÙØ§</p>
-                    <p class=" text-muted">
-                      Ø³ÙÙÙÙÙÙÙØ§Ù 50Ùª ÙÙ Ø¬ÙÙØ¹ Ø§ÙÙØ³ØªØ¬ÙØ¨ÙÙ Ø£ÙÙÙ Ø³ÙÙÙÙÙÙ
-                      Ø£ÙØ«Ø± Ø¹Ø±Ø¶Ø© ÙÙØªØ³ÙÙ ÙÙ Ø´Ø±ÙØ©
-                    </p>
+                  <td class="text-right">
+                    <p class="title">القضاياالقضايا</p>
+                    <p class="text-muted">سيكونونقال 50٪ من جميع المستجيبين أنهم سيكونون أكثر عرضة للتسوق في شركة</p>
                   </td>
-                  <td class=" td-actions">
-                    <button class=" btn btn-link" type="button">
-                      <i class=" tim-icons icon-settings"> </i>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                      <i class="tim-icons icon-settings"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <td class=" text-center">
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          checked=""
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
+                  <td class="text-center">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" checked="">
+                        <span class="form-check-sign">
+                          <span class="check"></span>
                         </span>
                       </label>
                     </div>
                   </td>
-                  <td class=" text-right">
-                    <p class=" title">
-                      ØªØµØ¯ÙØ± Ø§ÙÙÙÙØ§Øª Ø§ÙØªÙ ØªÙØª ÙØ¹Ø§ÙØ¬ØªÙØ§
-                    </p>
-                    <p class=" text-muted">
-                      ÙÙØ§ ÙØ¨ÙÙ Ø§ÙØªÙØ±ÙØ± Ø£Ù Ø§ÙÙØ³ØªÙÙÙÙÙ ÙÙ ÙØºÙØ±ÙØ§
-                      Ø´Ø±ÙØ© Ø¨Ø³ÙÙÙØ© Ø¨ÙØ¬Ø±Ø¯ Ø­Ø¯ÙØ« Ø®Ø±Ù ÙØ¹Ø±Ø¶
-                      Ø¨ÙØ§ÙØ§ØªÙÙ Ø§ÙØ´Ø®ØµÙØ©.
-                    </p>
+                  <td class="text-right">
+                    <p class="title">تصدير الملفات التي تمت معالجتها</p>
+                    <p class="text-muted">كما يبين التقرير أن المستهلكين لن يغفروا شركة بسهولة بمجرد حدوث خرق يعرض بياناتهم الشخصية.</p>
                   </td>
-                  <td class=" td-actions">
-                    <button class=" btn btn-link" type="button">
-                      <i class=" tim-icons icon-settings"> </i>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                      <i class="tim-icons icon-settings"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <td class=" text-center">
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          checked=""
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
+                  <td class="text-center">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" checked="">
+                        <span class="form-check-sign">
+                          <span class="check"></span>
                         </span>
                       </label>
                     </div>
                   </td>
-                  <td class=" text-right">
-                    <p class=" title">Ø§ÙÙØµÙÙ Ø¥ÙÙ Ø¹ÙÙÙØ© Ø§ÙØªØµØ¯ÙØ±</p>
-                    <p class=" text-muted">
-                      Ø³ÙØ§Ø³Ø© Ø§ÙØ³ÙØ¡ Ø¥ÙØ·ÙØ§Ù ÙÙ ÙØ¨Ù, ÙØ³Ø§Ø¹Ø¯Ø©
-                      ÙØ§ÙÙØ§ÙÙØ§ Ø£Ø®Ø° ÙØ¯. Ø¨Ù Ø£ÙØ§ Ø£ÙØ§Ù ÙØ§Ø´Ø§Ø¡
-                      Ø§ÙØ´ØªØ§Ø¡Ø, ØªÙØ§ÙÙÙ Ø§ÙØ¥ÙØªØµØ§Ø¯Ù Ø¨Ù Ø­ÙÙ. Ù£Ù 
-                      ÙØªØ¹ÙÙÙ ÙÙØ¥ØªØ­Ø§Ø¯ ÙÙÙ, ÙØªÙ ÙÙØ§Ù ÙØ¯ÙÙØ© Ø¨ØªØ­Ø¯ÙÙ
-                      Ø¥Ø°, ÙØ§Ù Ø¨Ù Ø¹ÙÙ
-                    </p>
+                  <td class="text-right">
+                    <p class="title">الوصول إلى عملية التصدير</p>
+                    <p class="text-muted">سياسة السيء إنطلاق في قبل, مساعدة والمانيا أخذ قد. بل أما أمام ماشاء الشتاء،, تكاليف الإقتصادي بـ حين. ٣٠ يتعلّق للإتحاد ولم, وتم هناك مدينة بتحدّي إذ, كان بل عمل</p>
                   </td>
-                  <td class=" td-actions">
-                    <button class=" btn btn-link" type="button">
-                      <i class=" tim-icons icon-settings"> </i>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                      <i class="tim-icons icon-settings"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
-                  <td class=" text-center">
-                    <div class=" form-check">
-                      <label class=" form-check-label">
-                        <input
-                          class=" form-check-input"
-                          type="checkbox"
-                          value=""
-                        />
-
-                        <span class=" form-check-sign">
-                          <span class=" check"> </span>
+                  <td class="text-center">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        <span class="form-check-sign">
+                          <span class="check"></span>
                         </span>
                       </label>
                     </div>
                   </td>
-                  <td class=" text-right">
-                    <p class=" title">Ø§ÙØ§ÙØ±Ø§Ø¬ Ø¹Ù v2.0.0</p>
-                    <p class=" text-muted">
-                      Ø¹Ù Ø±Ø¦ÙØ³ Ø·ÙÙÙÙ Ø§ÙØ¨ÙÙÙØ¯Ù ÙÙÙ, ÙØ§ÙÙ ÙØ±Ø¬Ø¹
-                      ÙØ¨Ø§Ø¡Øª ÙØ¨Ù ÙÙ, ØªØ³ÙÙÙ Ø§ÙØ·Ø±ÙÙ Ø§ÙØ¥ÙØªØµØ§Ø¯Ù
-                      Ø°Ø§Øª Ø£Ù. ÙØºØ§Øª Ø§ÙØ¥Ø·ÙØ§Ù Ø§ÙÙØ±ÙØ³ÙØ© Ø¯Ø§Ø± Ø§Ù,
-                      Ø¨ÙÙ Ø¨ØªØ®ØµÙØµ Ø§ÙØ³Ø§Ø­Ø© Ø§ÙØªØµØ§Ø¯ÙØ© Ø£Ù. Ù Ø§ÙØ¢Ø®
-                    </p>
+                  <td class="text-right">
+                    <p class="title">الافراج عن v2.0.0</p>
+                    <p class="text-muted">عن رئيس طوكيو البولندي لمّ, مايو مرجع وباءت قبل هو, تسمّى الطريق الإقتصادي ذات أن. لغات الإطلاق الفرنسية دار ان, بين بتخصيص الساحة اقتصادية أم. و الآخ</p>
                   </td>
-                  <td class=" td-actions">
-                    <button class=" btn btn-link" type="button">
-                      <i class=" tim-icons icon-settings"> </i>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="مهمة تحرير">
+                      <i class="tim-icons icon-settings"></i>
                     </button>
                   </td>
                 </tr>
@@ -321,64 +236,128 @@
         </div>
       </div>
     </div>
-    <div class=" col-lg-6 col-sm-6">
-      <div class=" card">
-        <div class=" card-header text-right">
-          <h4 class=" card-title">Ø¬Ø¯ÙÙ Ø¨Ø³ÙØ·</h4>
+    <div class="col-lg-6 col-sm-6">
+      <div class="card ">
+        <div class="card-header text-right">
+          <h4 class="card-title">جدول بسيط</h4>
         </div>
-        <div class=" card-body">
-          <div class=" table-responsive">
-            <table class=" table tablesorter" id="">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table tablesorter " id="">
               <thead class=" text-primary">
                 <tr>
-                  <th>Ø§Ø³Ù</th>
-                  <th>Ø¨ÙØ¯</th>
-                  <th>ÙØ¯ÙÙØ©</th>
-                  <th class=" text-center">Ø±Ø§ØªØ¨</th>
+                  <th>
+                    اسم
+                  </th>
+                  <th>
+                    بلد
+                  </th>
+                  <th>
+                    مدينة
+                  </th>
+                  <th class="text-center">
+                    راتب
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Ø±Ø§ÙØ³ Ø¯Ø§ÙÙØªØ§</td>
-                  <td>Ø§ÙÙÙØ¬Ø±</td>
-                  <td>Ø§ÙØ¹ÙØ¯-ØªÙØ±ÙÙØ§ÙØª</td>
-                  <td class=" text-center">$36,738</td>
+                  <td>
+                    رايس داكوتا
+                  </td>
+                  <td>
+                    النيجر
+                  </td>
+                  <td>
+                    العود-تورنهاوت
+                  </td>
+                  <td class="text-center">
+                    $36,738
+                  </td>
                 </tr>
                 <tr>
-                  <td>ÙÙÙÙØ±ÙØ§ ÙÙØ¨Ø±</td>
-                  <td>ÙÙØ±Ø§Ø³Ø§Ù</td>
-                  <td>Sinaai-ÙØ§Ø³</td>
-                  <td class=" text-center">$23,789</td>
+                  <td>
+                    مينيرفا هوبر
+                  </td>
+                  <td>
+                    كوراساو
+                  </td>
+                  <td>
+                    سيناء واس
+                  </td>
+                  <td class="text-center">
+                    $23,789
+                  </td>
                 </tr>
                 <tr>
-                  <td>Ø³ÙØ¬ Ø±ÙØ¯Ø±ÙØ¬ÙØ²</td>
-                  <td>ÙÙÙÙØ¯Ø§</td>
-                  <td>Ø¨Ø§ÙÙÙ</td>
-                  <td class=" text-center">$56,142</td>
+                  <td>
+                    سيج رودريجيز
+                  </td>
+                  <td>
+                    هولندا
+                  </td>
+                  <td>
+                    بايلي
+                  </td>
+                  <td class="text-center">
+                    $56,142
+                  </td>
                 </tr>
                 <tr>
-                  <td>ÙÙÙÙØ¨ Ø´Ø§ÙÙÙ</td>
-                  <td>ÙÙØ±ÙØ§Ø Ø¬ÙÙØ¨</td>
-                  <td>Ø§ÙÙØ±ÙØ§ÙØ¯ Ø¨Ø§Ø±Ù</td>
-                  <td class=" text-center">$38,735</td>
+                  <td>
+                    فيليب شانيه
+                  </td>
+                  <td>
+                    كوريا، جنوب
+                  </td>
+                  <td>
+                    اوفرلاند بارك
+                  </td>
+                  <td class="text-center">
+                    $38,735
+                  </td>
                 </tr>
                 <tr>
-                  <td>Ø¯ÙØ±ÙØ³ ØºØ±ÙÙ</td>
-                  <td>ÙØ§ÙØ§ÙÙ</td>
-                  <td>Ø§ÙÙÙØ¹</td>
-                  <td class=" text-center">$63,542</td>
+                  <td>
+                    دوريس غرين
+                  </td>
+                  <td>
+                    مالاوي
+                  </td>
+                  <td>
+                    المنع
+                  </td>
+                  <td class="text-center">
+                    $63,542
+                  </td>
                 </tr>
                 <tr>
-                  <td>ÙÙØ³ÙÙ Ø¨ÙØ±ØªØ±</td>
-                  <td>ØªØ´ÙÙÙ</td>
-                  <td>ØºÙÙØ³ØªØ±</td>
-                  <td class=" text-center">$78,615</td>
+                  <td>
+                    ميسون بورتر
+                  </td>
+                  <td>
+                    تشيلي
+                  </td>
+                  <td>
+                    غلوستر
+                  </td>
+                  <td class="text-center">
+                    $78,615
+                  </td>
                 </tr>
                 <tr>
-                  <td>Ø¬ÙÙ Ø¨ÙØ±ØªØ±</td>
-                  <td>Ø§ÙØ¨Ø±ØªØºØ§Ù</td>
-                  <td>ØºÙÙØ³ØªØ±</td>
-                  <td class=" text-center">$98,615</td>
+                  <td>
+                    جون بورتر
+                  </td>
+                  <td>
+                    البرتغال
+                  </td>
+                  <td>
+                    غلوستر
+                  </td>
+                  <td class="text-center">
+                    $98,615
+                  </td>
                 </tr>
               </tbody>
             </table>

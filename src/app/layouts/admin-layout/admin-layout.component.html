@@ -17,12 +17,17 @@
         <a class=" switch-trigger background-color" href="javascript:void(0)">
           <div class=" badge-colors text-center">
             <span
-              class=" badge filter badge-primary active"
-              data-color="primary"
+              class=" badge filter badge-danger"
+              [ngClass]="{'active':sidebarColor==='red'}" (click)="changeSidebarColor('red')"
             >
             </span>
-            <span class=" badge filter badge-info" data-color="blue"> </span>
-            <span class=" badge filter badge-success" data-color="green">
+            <span
+              class=" badge filter badge-primary"
+              [ngClass]="{'active':sidebarColor==='primary'}" (click)="changeSidebarColor('primary')"
+            >
+            </span>
+            <span class=" badge filter badge-info" [ngClass]="{'active':sidebarColor==='blue'}" (click)="changeSidebarColor('blue')"> </span>
+            <span class=" badge filter badge-success" [ngClass]="{'active':sidebarColor==='green'}" (click)="changeSidebarColor('green')">
             </span>
           </div>
           <div class=" clearfix"></div>
@@ -30,8 +35,8 @@
       </li>
       <li class=" adjustments-line text-center color-change">
         <span class=" color-label"> LIGHT MODE </span>
-        <span class=" badge light-badge mr-2"> </span>
-        <span class=" badge dark-badge ml-2"> </span>
+        <span class=" badge light-badge mr-2" (click)="changeDashboardColor('white-content')"> </span>
+        <span class=" badge dark-badge ml-2" (click)="changeDashboardColor('black-content')"> </span>
         <span class=" color-label"> DARK MODE </span>
       </li>
       <li class=" button-container">
