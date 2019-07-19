@@ -1,4 +1,4 @@
-# [Black Dashboard Angular](https://demos.creative-tim.com/black-dashboard-angular/#/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-angular%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20Angular%20by%20Creative%20Tim%20%7C%20Free%20Angular%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-angular%2F&via=creativetim&hashtags=angular%2Ccreativetim%2Cdark%2Cdashboard%2Cbootstrap%2Cangular)
+# [Black Dashboard Angular](https://demos.creative-tim.com/black-dashboard-angular/#/dashboard?ref=bda-readme) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-angular%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20Angular%20by%20Creative%20Tim%20%7C%20Free%20Angular%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-angular%2F&via=creativetim&hashtags=angular%2Ccreativetim%2Cdark%2Cdashboard%2Cbootstrap%2Cangular)
 
 
 
@@ -39,30 +39,30 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 ## Versions
 
-[<img src="https://s3.amazonaws.com/creativetim_bucket/github/html.png" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard)
-[<img src="https://s3.amazonaws.com/creativetim_bucket/github/angular.png" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-angular)
-[<img src="https://s3.amazonaws.com/creativetim_bucket/github/react.svg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-react)
-[<img src="https://s3.amazonaws.com/creativetim_bucket/github/vuejs.png" width="60" height="60" />](https://www.creative-tim.com/product/vue-black-dashboard)
+[<img src="https://s3.amazonaws.com/creativetim_bucket/github/html.png" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard?ref=bda-readme)
+[<img src="https://s3.amazonaws.com/creativetim_bucket/github/angular.png" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-angular?ref=bda-readme)
+[<img src="https://s3.amazonaws.com/creativetim_bucket/github/react.svg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-react?ref=bda-readme)
+[<img src="https://s3.amazonaws.com/creativetim_bucket/github/vuejs.png" width="60" height="60" />](https://www.creative-tim.com/product/vue-black-dashboard?ref=bda-readme)
 
 
 | HTML | Angular | React | Vue |
 | --- | --- | --- | --- |
-| [![Black Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/93/thumb/opt_bd_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard) | [![Black Dashboard Angular](https://s3.amazonaws.com/creativetim_bucket/products/136/thumb/opt_bd_angular.jpg)](https://www.creative-tim.com/product/black-dashboard-angular) | [![Black Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/136/thumb/opt_bd_react.jpg)](https://www.creative-tim.com/product/black-dashboard-react) | [![Vue Black Dashboard](https://s3.amazonaws.com/creativetim_bucket/products/99/thumb/opt_bd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard) |
+| [![Black Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/93/thumb/opt_bd_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard?ref=bda-readme) | [![Black Dashboard Angular](https://s3.amazonaws.com/creativetim_bucket/products/136/thumb/opt_bd_angular.jpg)](https://www.creative-tim.com/product/black-dashboard-angular?ref=bda-readme) | [![Black Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/136/thumb/opt_bd_react.jpg)](https://www.creative-tim.com/product/black-dashboard-react?ref=bda-readme) | [![Vue Black Dashboard](https://s3.amazonaws.com/creativetim_bucket/products/99/thumb/opt_bd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard?ref=bda-readme) |
 
 ## Demo
 
 | Dashboard | User Profile | Tables | Maps | Notification |
 | --- | --- | --- | --- | --- |
-| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/dashboard) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/user) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/tables) | [![Maps Page](./github-assets/maps-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/maps) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/notifications)
+| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/dashboard?ref=bda-readme) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/user?ref=bda-readme) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/tables?ref=bda-readme) | [![Maps Page](./github-assets/maps-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/maps?ref=bda-readme) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-angular/#/notifications?ref=bda-readme)
 
-[View More](https://demos.creative-tim.com/black-dashboard-angular/#/dashboard).
+[View More](https://demos.creative-tim.com/black-dashboard-angular/#/dashboard?ref=bda-readme).
 
 
 ## Quick start
 
 Quick start options:
 
-- [Download from Creative Tim](https://www.creative-tim.com/product/black-dashboard-angular).
+- [Download from Creative Tim](https://www.creative-tim.com/product/black-dashboard-angular?ref=bda-readme).
 
 ## Terminal Commands
 
@@ -80,65 +80,102 @@ Within the download you'll find the following directories and files:
 
 ```
 black-dashboard-angular
-├── package.json
 ├── CHANGELOG.md
+├── documentation
 ├── ISSUE_TEMPLATE.md
 ├── LICENSE.md
 ├── README.md
-├── Documentation
-│   └── documentation.html
-├── github-assets
-│   └── react.svg
-├── public
-│   ├── index.html
-│   └── manifest.json
-└── src
-    ├── index.js
-    ├── logo-white.svg
-    ├── logo.svg
-    ├── routes.js
-    ├── assets
-    │   ├── css
-    │   ├── demo
-    │   ├── fonts
-    │   ├── img
-    │   └── scss
-    │       ├── black-dashboard
-    │       │   ├── bootstrap
-    │       │   │   ├── mixins
-    │       │   │   └── utilities
-    │       │   ├── custom
-    │       │   │   ├── cards
-    │       │   │   ├── mixins
-    │       │   │   ├── utilities
-    │       │   │   └── vendor
-    │       └── black-dashboard.scss
-    ├── components
-    │   ├── FixedPlugin
-    │   │   └── FixedPlugin.jsx
-    │   ├── Footer
-    │   │   └── Footer.jsx
-    │   ├── Navbars
-    │   │   ├── AdminNavbar.jsx
-    │   │   └── RTLNavbar.jsx
-    │   └── Sidebar
-    │       └── Sidebar.jsx
-    ├── layouts
-    │   ├── Admin
-    │   │   └── Admin.jsx
-    │   └── RTL
-    │       └── RTL.jsx
-    ├── variables
-    │   └── charts.jsx
-    └── views
-        ├── Dashboard.jsx
-        ├── Icons.jsx
-        ├── Map.jsx
-        ├── Notifications.jsx
-        ├── Rtl.jsx
-        ├── TableList.jsx
-        ├── Typography.jsx
-        └── UserProfile.jsx
+├── angular.json
+├── e2e
+├── package-lock.json
+├── package.json
+├── src
+│   ├── app
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── components
+│   │   │   ├── components.module.ts
+│   │   │   ├── footer
+│   │   │   │   ├── footer.component.css
+│   │   │   │   ├── footer.component.html
+│   │   │   │   ├── footer.component.spec.ts
+│   │   │   │   └── footer.component.ts
+│   │   │   ├── navbar
+│   │   │   │   ├── navbar.component.css
+│   │   │   │   ├── navbar.component.html
+│   │   │   │   ├── navbar.component.spec.ts
+│   │   │   │   └── navbar.component.ts
+│   │   │   └── sidebar
+│   │   │       ├── sidebar.component.css
+│   │   │       ├── sidebar.component.html
+│   │   │       ├── sidebar.component.spec.ts
+│   │   │       └── sidebar.component.ts
+│   │   ├── layouts
+│   │   │   ├── admin-layout
+│   │   │   │   ├── admin-layout.component.html
+│   │   │   │   ├── admin-layout.component.scss
+│   │   │   │   ├── admin-layout.component.spec.ts
+│   │   │   │   ├── admin-layout.component.ts
+│   │   │   │   ├── admin-layout.module.ts
+│   │   │   │   └── admin-layout.routing.ts
+│   │   │   └── auth-layout
+│   │   │       ├── auth-layout.component.html
+│   │   │       ├── auth-layout.component.scss
+│   │   │       ├── auth-layout.component.spec.ts
+│   │   │       ├── auth-layout.component.ts
+│   │   │       ├── auth-layout.module.ts
+│   │   │       └── auth-layout.routing.ts
+│   │   └── pages
+│   │       ├── dashboard
+│   │       │   ├── dashboard.component.html
+│   │       │   └── dashboard.component.ts
+│   │       ├── icons
+│   │       │   ├── icons.component.html
+│   │       │   └── icons.component.ts
+│   │       ├── map
+│   │       │   ├── map.component.html
+│   │       │   └── map.component.ts
+│   │       ├── notifications
+│   │       │   ├── notifications.component.html
+│   │       │   └── notifications.component.ts
+│   │       ├── rtl
+│   │       │   ├── rtl.component.html
+│   │       │   └── rtl.component.ts
+│   │       ├── tables
+│   │       │   ├── tables.component.html
+│   │       │   └── tables.component.ts
+│   │       ├── typography
+│   │       │   ├── typography.component.html
+│   │       │   └── typography.component.ts
+│   │       └── user
+│   │           ├── user.component.html
+│   │           └── user.component.ts
+│   ├── assets
+│   │   ├── css
+│   │   ├── demo
+│   │   ├── fonts
+│   │   ├── img
+│   │   └── scss
+│   │       ├── black-dashboard
+│   │       └── black-dashboard.scss
+│   ├── browserslist
+│   ├── environments
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── karma.conf.js
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── styles.scss
+│   ├── test.ts
+│   ├── tsconfig.app.json
+│   ├── tsconfig.spec.json
+│   └── tslint.json
+├── tsconfig.json
+└── tslint.json
 ```
 `
 ## Browser Support
@@ -149,12 +186,12 @@ At present, we officially aim to support the last two versions of the following 
 
 
 ## Resources
-- Demo: https://demos.creative-tim.com/black-dashboard-angular/#/dashboard
-- Download Page: https://www.creative-tim.com/product/black-dashboard-angular
-- Documentation: https://demos.creative-tim.com/black-dashboard-angular/#/documentation/tutorial
-- License Agreement: https://www.creative-tim.com/license
-- Support: https://www.creative-tim.com/contact-us
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/black-dashboard-angular/issues)
+- Demo: https://demos.creative-tim.com/black-dashboard-angular/#/dashboard?ref=bda-readme
+- Download Page: https://www.creative-tim.com/product/black-dashboard-angular?ref=bda-readme
+- Documentation: https://demos.creative-tim.com/black-dashboard-angular/#/documentation/tutorial?ref=bda-readme
+- License Agreement: https://www.creative-tim.com/license?ref=bda-readme
+- Support: https://www.creative-tim.com/contact-us?ref=bda-readme
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/black-dashboard-angular/issues?ref=bda-readme)
 
 ## Reporting Issues
 We use GitHub Issues as the official bug tracker for the black Dashboard Angular. Here are some advices for our users that want to report an issue:
@@ -165,22 +202,22 @@ We use GitHub Issues as the official bug tracker for the black Dashboard Angular
 
 ## Technical Support or Questions
 
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
+If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=bda-readme) instead of opening an issue.
 
 ## Licensing
 
-- Copyright 2019 Creative Tim (https://www.creative-tim.com)
+- Copyright 2019 Creative Tim (https://www.creative-tim.com?ref=bda-readme)
 - Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-angular/blob/master/LICENSE.md)
 
 ## Useful Links
 
-More products from Creative Tim: <https://www.creative-tim.com/products>
+More products from Creative Tim: <https://www.creative-tim.com/products?ref=bda-readme>
 
 Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
 
-Freebies: <https://www.creative-tim.com/products>
+Freebies: <https://www.creative-tim.com/products?ref=bda-readme>
 
-Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
+Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new?ref=bda-readme>
 
 Social Media:
 
