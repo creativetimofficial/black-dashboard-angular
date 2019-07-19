@@ -28,7 +28,7 @@
     "url": "https://github.com/creativetimofficial/black-dashboard-angular/issues"
   },
   "homepage": "https://demos.creative-tim.com/black-dashboard-angular/#/dashboard",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "8.0.2",
     "@angular/common": "8.0.2",
