@@ -1,6 +1,7 @@
 {
   "name": "black-dashboard-angular",
   "version": "1.0.0",
+  "description": "Black Dasboard Angular, a Creative Tim Desgin. Coded by Creative Tim",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,6 +11,23 @@
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/black-dashboard-angular.git"
+  },
+  "keywords": [
+    "angular dashboard", "angular admin", "angular bootstrap admin", "angular bootstrap dashboard", "angular panel", "angular bootstrap template", "angular admin template", "angular free", "angular free dashboard", "angular free bootstrap dashboard", "free admin template", "angular admin", "angular admin panel", "angular dashboard", "angular dashboard free", "angular admin free", "angular free admin panel", "angular freebie", "angular freebie dashboard",
+    "angular freebie bootstrap dashboard", "freebie admin template", "angular dashboard freebie", "angular admin freebie", "angular freebie admin panel", "creative tim", "web dashboard", "bootstrap 4 dashboard", "bootstrap 4", "css3 dashboard", "bootstrap 4 admin", "black dashboard bootstrap 4", "frontend", "responsive bootstrap 4 dashboard", "free dashboard"," free admin dashboard", "free bootstrap 4 admin dashboard"
+  ],
+  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/black-dashboard-angular/issues"
+  },
+  "homepage": "https://demos.creative-tim.com/black-dashboard-angular/#/dashboard",
   "private": true,
   "dependencies": {
     "@angular/animations": "8.0.2",
