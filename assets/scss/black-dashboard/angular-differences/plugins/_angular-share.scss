@@ -17,13 +17,6 @@ share-button{
     line-height: normal;
     border-width: 1px;
     border-radius: 30px;
-
-    &:before{
-          content: "\f082";
-          font-size: 0.9375rem;
-          top: 11px;
-          position: relative;
-    }
   }
   .sb-twitter.sb-wrapper{
     font: normal normal normal 14px/1 FontAwesome;
@@ -43,13 +36,8 @@ share-button{
     line-height: normal;
     border-width: 1px;
     border-radius: 30px;
-
-    &:before{
-          content: "\f099";
-          font-size: 0.9375rem;
-          top: 11px;
-          position: relative;
-    }
   }
-
+  .sb-facebook,.sb-twitter{
+    box-shadow: none !important;
+  }
 }

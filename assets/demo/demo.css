@@ -243,3 +243,7 @@ body {
 }
 .bd-docs .bd-example .btn-group{margin-right: 5px !important;}
 /* .bd-docs .bd-example .tim-icons{color: black;} */
+.bd-docs .card-img-overlay .blockquote, .bd-docs  .blockquote .card-img-overlay p,.bd-docs .card .card-img-overlay p, .bd-docs .card-img-overlay h4{
+  color: #2c2c2c;
+}
+.bd-docs header{ z-index: 1051;}
