@@ -22,6 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
+            "allowedCommonJsDependencies": ["chart.js"],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -33,7 +34,6 @@
               "src/assets/css/nucleo-icons.css"
             ],
             "scripts": [],
-            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
