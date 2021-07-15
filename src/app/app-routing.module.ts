@@ -18,17 +18,16 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        loadChildren:
-          "./layouts/admin-layout/admin-layout.module#AdminLayoutModule"
+        loadChildren: () => import ("./layouts/admin-layout/admin-layout.module").then(m => m.AdminLayoutModule)
       }
     ]
   }, {
-    path: '',
+    path: "",
     component: AuthLayoutComponent,
     children: [
       {
-        path: '',
-        loadChildren: './layouts/auth-layout/auth-layout.module#AuthLayoutModule'
+        path: "",
+        loadChildren: () => import ("./layouts/auth-layout/auth-layout.module").then(m => m.AuthLayoutModule)
       }
     ]
   },
