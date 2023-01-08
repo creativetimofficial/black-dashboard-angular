@@ -35,12 +35,18 @@ export const ROUTES: RouteInfo[] = [
     icon: "icon-upload",
     class: ""
   },
-
+  {
+    path: "/notifications",
+    title: "Attribute Configuration",
+    rtlTitle: "إخطارات",
+    icon: "icon-settings",
+    class: ""
+  },
   {
     path: "/user",
-    title: "User Profile",
+    title: "Reports",
     rtlTitle: "ملف تعريفي للمستخدم",
-    icon: "icon-single-02",
+    icon: "icon-chart-bar-32",
     class: ""
   },
 
