@@ -7,8 +7,11 @@
         <div class=" card-header">
           <div class=" row">
             <div class=" col-sm-6 text-left">
-              <h5 class=" card-category">Scenario Attributes</h5>
+              <h5 class=" card-category">Scenario Version</h5>
               <h2 class=" card-title">SCENARIO NAME</h2>
+            </div>
+            <div class=" col-sm-6 text-right">
+              <button class = "btn btn-group">Export Scenario</button>
             </div>
             <!-- <div class=" col-sm-6">
               <div
@@ -62,7 +65,7 @@
         <!-- <div class=" card-body">
           <div class=" chart-area"><canvas id="chartBig1"> </canvas></div>
         </div> -->
-        <div class=" card-body">
+        <!-- <div class=" card-body">
           <div class=" table-responsive">
             <table class=" table tablesorter" id="">
               <thead class=" text-primary">
@@ -119,48 +122,7 @@
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class=" row">
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Total Shipments</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLineRed"> </canvas></div>
-        </div>
-      </div>
-    </div>
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Daily Sales</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500€
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="CountryChart"> </canvas></div>
-        </div>
-      </div>
-    </div>
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Completed Tasks</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-send text-success"> </i> 12,100K
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -168,7 +130,7 @@
     <div class=" col-lg-6 col-md-12">
       <div class=" card card-tasks">
         <div class=" card-header">
-          <h6 class=" title d-inline">Tasks(5)</h6>
+          <h6 class=" title d-inline">Notes</h6>
           <p class=" card-category d-inline">today</p>
           <div ngbDropdown>
             <button
@@ -377,7 +339,7 @@
     <div class=" col-lg-6 col-md-12">
       <div class=" card">
         <div class=" card-header">
-          <h4 class=" card-title">Simple Table</h4>
+          <h4 class=" card-title">Scenario Version Log</h4>
         </div>
         <div class=" card-body">
           <div class=" table-responsive">
@@ -440,4 +402,46 @@
       </div>
     </div>
   </div>
+  <div class=" row">
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Total Shipments</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartLineRed"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Daily Sales</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500€
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="CountryChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Completed Tasks</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-send text-success"> </i> 12,100K
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

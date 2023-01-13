@@ -1,0 +1,2 @@
+Use export NODE_OPTIONS=--openssl-legacy-provider
+to run with legacy node for ng serve
