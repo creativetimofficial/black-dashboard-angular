@@ -1,6 +1,42 @@
-<div class = "content">
-<input type="file"/>
+<div class="content">
+    <div class="container">
 
+        <div class=" row">
+            <div class=" col-sm-6 text-left">
+                <h2 >Import Tables</h2>
+                <input type="file" appReadexcel (eventEmitter)="DataFromEventEmitter($event)" />
+
+            </div>
+            <div class=" col-sm-6 text-right">
+                <button class="btn btn-group" (click)="submitClicked()" [disabled]="disableButton">
+                    Submit
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <table class=" table tablesorter" id="">
+            <thead class=" text-primary">
+              <tr>
+                <th>Table</th>
+                <th>Rows</th>
+                <th>Valid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dakota Rice</td>
+                <td>Niger</td>
+                <td>Oud-Turnhout</td>
+                <td class=" text-center">$36,738</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
 
 
 </div>
