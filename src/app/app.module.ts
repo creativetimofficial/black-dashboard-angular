@@ -14,6 +14,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { ComponentsModule } from "./components/components.module";
 import { ScenarioListComponent } from './layouts/scenario-list/scenario-list.component';
+import { ImportComponent } from './pages/import/import.component';
+import { ReadexcelDirective } from './directives/readexcel.directive';
 
 @NgModule({
   imports: [
@@ -26,7 +28,7 @@ import { ScenarioListComponent } from './layouts/scenario-list/scenario-list.com
     AppRoutingModule,
     ToastrModule.forRoot()
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, ScenarioListComponent],
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, ScenarioListComponent, ImportComponent, ReadexcelDirective],
   providers: [],
   bootstrap: [AppComponent]
 })

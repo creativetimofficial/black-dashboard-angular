@@ -29,7 +29,7 @@ export const ROUTES: RouteInfo[] = [
     icon: "icon-support-17",
     class: "" },
   {
-    path: "/notifications",
+    path: "/import",
     title: "File Import",
     rtlTitle: "إخطارات",
     icon: "icon-upload",
