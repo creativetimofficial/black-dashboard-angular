@@ -8,7 +8,7 @@
 
             </div>
             <div class=" col-sm-6 text-right">
-                <button class="btn btn-group" (click)="submitClicked()" [disabled]="disableButton">
+                <button class="btn btn-group" (click)="submitClicked()" [disabled]="disableButton" [routerLink]="['/dashboard/:id']">
                     Submit
                 </button>
 
@@ -18,21 +18,21 @@
 
     </div>
 
-    <div class="container">
+    <div class="container" *ngIf ="showTable">
         <table class=" table tablesorter" id="">
             <thead class=" text-primary">
               <tr>
                 <th>Table</th>
                 <th>Rows</th>
-                <th>Valid</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Dakota Rice</td>
-                <td>Niger</td>
-                <td>Oud-Turnhout</td>
-                <td class=" text-center">$36,738</td>
+              <tr *ngFor="let n of sheetCount.keys()">
+                <td>{{n}}</td>
+                <td>{{sheetCount.get(n)}}</td>
+                <td>VALID</td>
+                
               </tr>
             </tbody>
           </table>
