@@ -6,12 +6,17 @@
 
         <div class=" card-header">
           <div class=" row">
-            <div class=" col-sm-6 text-left">
+            <div class=" col-sm-4 text-left">
               <h5 class=" card-category">Scenario Version</h5>
-              <h2 class=" card-title">SCENARIO NAME VERSION 1</h2>
+              
+              
+              <h2 class=" card-title">SCENARIO NAME</h2>
+
             </div>
-            <div class=" col-sm-6 text-right">
+
+            <div class=" col-sm-8 text-right">
               <button class = "btn btn-group">Export Scenario</button>
+
               
             </div>
             <!-- <div class=" col-sm-6">
@@ -73,12 +78,14 @@
         <div class=" card-header">
           <h6 class=" title d-inline">Scenario Actions</h6>
           <div ngbDropdown>
+            
             <button
               class=" btn btn-link btn-icon"
               data-toggle="dropdown"
               ngbDropdownToggle
               type="button"
             >
+              
               <i class=" tim-icons icon-settings-gear-63"> </i>
             </button>
             <div
@@ -95,6 +102,20 @@
           <div class=" table-full-width table-responsive">
             <table class=" table">
               <tbody>
+                <tr>
+                  
+                  <td>
+                    <a 
+                      routerLink="" routerLinkActive="active"
+                    >
+                      <p class=" title">Change Scenarios</p>
+                    </a>
+                    <p class=" text-muted">
+                      Switch to a different scenario
+                    </p>
+                  </td>
+                  
+                </tr>
                 <tr>
                   
                   <td>

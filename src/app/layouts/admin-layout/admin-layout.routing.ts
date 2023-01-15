@@ -8,6 +8,7 @@ import { UserComponent } from "../../pages/user/user.component";
 import { TablesComponent } from "../../pages/tables/tables.component";
 import { TypographyComponent } from "../../pages/typography/typography.component";
 import { ImportComponent } from 'src/app/pages/import/import.component';
+import { MissingColumnsComponent } from 'src/app/pages/import/missing-columns/missing-columns.component';
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
@@ -19,6 +20,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "tables", component: TablesComponent },
   { path: "typography", component: TypographyComponent },
   { path: "import", component: ImportComponent },
+  { path: "import/:sheet", component: MissingColumnsComponent },
 
   // { path: "rtl", component: RtlComponent }
 ];

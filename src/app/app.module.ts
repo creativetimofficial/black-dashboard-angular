@@ -16,6 +16,8 @@ import { ComponentsModule } from "./components/components.module";
 import { ScenarioListComponent } from './layouts/scenario-list/scenario-list.component';
 import { ImportComponent } from './pages/import/import.component';
 import { ReadexcelDirective } from './directives/readexcel.directive';
+import { MissingColumnsComponent } from './pages/import/missing-columns/missing-columns.component';
+
 
 @NgModule({
   imports: [
@@ -28,7 +30,7 @@ import { ReadexcelDirective } from './directives/readexcel.directive';
     AppRoutingModule,
     ToastrModule.forRoot()
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, ScenarioListComponent, ImportComponent, ReadexcelDirective],
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, ScenarioListComponent, ImportComponent, ReadexcelDirective, MissingColumnsComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
