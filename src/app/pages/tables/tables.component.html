@@ -1,65 +1,43 @@
 
+
+
 <div class=" content">
+
+  <span class=" nav-item" ngbDropdown>
+    <button class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true"data-toggle="dropdown" href="javascript:void(0)" ngbDropdownToggle>
+      Select Table
+    </button>
+    <ul class=" dropdown-navbar" ngbDropdownMenu>
+      <li class=" nav-link" *ngFor="let table of tableList">
+        <a class=" nav-item" href="javascript:void(0)" (value)="table" (click)="pullTable(table)"ngbDropdownItem >
+          {{table}}
+        </a>
+     
+    </ul>
+  </span>
+
+
   <div class=" row">
     <div class=" col-md-12">
       <div class=" card">
         <div class=" card-header">
-          <h4 class=" card-title">TABLE NAME</h4>
+          <h4 class=" card-title">{{currentTableName}}</h4>
         </div>
         <div class=" card-body">
           <div class=" table-responsive">
             <table class=" table tablesorter" id="">
               <thead class=" text-primary">
-                <tr>
-                  <th>Name</th>
-                  <th>Country</th>
-                  <th>City</th>
-                  <th class=" text-center">Salary</th>
+                <tr >
+                  <th *ngFor="let h of currentTableHeaders">{{h}}</th>
+                  
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td>Niger</td>
-                  <td>Oud-Turnhout</td>
-                  <td class=" text-center">$36,738</td>
+                <tr *ngFor="let r of currentTable">
+                  <td *ngFor="let h of currentTableHeaders">{{r[h]}}</td>
+                  
                 </tr>
-                <tr>
-                  <td>Minerva Hooper</td>
-                  <td>CuraÃ§ao</td>
-                  <td>Sinaai-Waas</td>
-                  <td class=" text-center">$23,789</td>
-                </tr>
-                <tr>
-                  <td>Sage Rodriguez</td>
-                  <td>Netherlands</td>
-                  <td>Baileux</td>
-                  <td class=" text-center">$56,142</td>
-                </tr>
-                <tr>
-                  <td>Philip Chaney</td>
-                  <td>Korea, South</td>
-                  <td>Overland Park</td>
-                  <td class=" text-center">$38,735</td>
-                </tr>
-                <tr>
-                  <td>Doris Greene</td>
-                  <td>Malawi</td>
-                  <td>Feldkirchen in KÃ¤rnten</td>
-                  <td class=" text-center">$63,542</td>
-                </tr>
-                <tr>
-                  <td>Mason Porter</td>
-                  <td>Chile</td>
-                  <td>Gloucester</td>
-                  <td class=" text-center">$78,615</td>
-                </tr>
-                <tr>
-                  <td>Jon Porter</td>
-                  <td>Portugal</td>
-                  <td>Gloucester</td>
-                  <td class=" text-center">$98,615</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>

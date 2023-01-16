@@ -73,6 +73,7 @@
     "@ng-bootstrap/ng-bootstrap": "10.0.0",
     "chart.js": "2.9.4",
     "core-js": "3.15.2",
+    "cors": "^2.8.5",
     "ngx-toastr": "14.0.0",
     "rxjs": "^7.2.0",
     "tslib": "2.3.0",

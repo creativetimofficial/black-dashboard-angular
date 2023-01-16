@@ -32,6 +32,7 @@ export class ImportComponent implements OnInit {
 
     console.log(event)
     this.sheetHash = event;
+    this.validColumns = true;
     this.verifySheetInfo();
     // this.sheetNames = Array.from(this.sheetHash.keys());
     // for(let i=0;i<this.sheetNames.length;i++){

@@ -12,7 +12,7 @@ import { MissingColumnsComponent } from 'src/app/pages/import/missing-columns/mi
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
-  { path: "dashboard/:id", component: DashboardComponent },
+  { path: "dashboard", component: DashboardComponent },
   { path: "icons", component: IconsComponent },
   { path: "maps", component: MapComponent },
   { path: "notifications", component: NotificationsComponent },
@@ -20,7 +20,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "tables", component: TablesComponent },
   { path: "typography", component: TypographyComponent },
   { path: "import", component: ImportComponent },
-  { path: "import/:sheet", component: MissingColumnsComponent },
+  { path: "import", component: MissingColumnsComponent },
 
   // { path: "rtl", component: RtlComponent }
 ];

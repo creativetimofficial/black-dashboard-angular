@@ -1,3 +1,4 @@
+
 <body>
     <div class="main-panel">
         <div class="container">
@@ -18,62 +19,30 @@
                         <div class=" card">
                             <div class=" card-header">
                                 <h4 class=" card-title">Scenarios</h4>
+                                <button class = "btn btn-light" (click)="open(content)">Test Add</button>
                             </div>
                             <div class=" card-body">
                                 <div class=" table-responsive">
                                     <table class=" table tablesorter" id="">
                                         <thead class=" text-primary">
                                             <tr>
-                                                <th>Scenario</th>
-                                                <th>Descripton</th>
-                                                <th>Version</th>
-                                                <th class=" text-center">Salary</th>
+                                                <th>ID</th>
+                                                <th>Current Version</th>
+                                                <th>Name</th>
+                                                
+                                                
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Dakota Rice</td>
-                                                <td>Niger</td>
-                                                <td>Oud-Turnhout</td>
+                                            <tr *ngFor="let scn of scenarios.scenarios">
+                                                <td>{{scn.scn_id}}</td>
+                                                <td>{{scn.version}}</td>
+                                                <td>{{scn.name}}</td>
                                                 
-                                                <td class=" text-center"><button class = "btn btn-light" [routerLink]="['dashboard',1]">View</button></td>
+                                                <td class=" text-center"><button class = "btn btn-light" (click)="viewScn(scn.scn_id)"[routerLink]="['dashboard']">View</button></td>
                                             </tr>
-                                            <tr>
-                                                <td>Minerva Hooper</td>
-                                                <td>CuraÃ§ao</td>
-                                                <td>Sinaai-Waas</td>
-                                                <td class=" text-center">$23,789</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sage Rodriguez</td>
-                                                <td>Netherlands</td>
-                                                <td>Baileux</td>
-                                                <td class=" text-center">$56,142</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Philip Chaney</td>
-                                                <td>Korea, South</td>
-                                                <td>Overland Park</td>
-                                                <td class=" text-center">$38,735</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Doris Greene</td>
-                                                <td>Malawi</td>
-                                                <td>Feldkirchen in KÃ¤rnten</td>
-                                                <td class=" text-center">$63,542</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mason Porter</td>
-                                                <td>Chile</td>
-                                                <td>Gloucester</td>
-                                                <td class=" text-center">$78,615</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jon Porter</td>
-                                                <td>Portugal</td>
-                                                <td>Gloucester</td>
-                                                <td class=" text-center">$98,615</td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -86,5 +55,43 @@
     
         </div>
     </div>
+    <ng-template #content let-modal >
+       
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                <button type="button" class="btn btn-warning" (click)="modal.dismiss('Cross click')">X</button>
+            </div>
+            <div class="modal-body">
+                
+                
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                        
+                        <div clas = "input-group">
+                            <label for ="id" ></label>
+                            <input name="id" class = "form-control" ngModel required #first="ngModel">
+                        </div>
+                        <div clas = "input-group">
+
+                            <label for ="name" ></label>
+                            <input name="name" ngModel>
+                            
+                        </div>
+                        <div clas = "input-group">
+                            <button>Submit</button>
+                        </div>
+                        
+                      </form>
+                
+            </div>
+
+        
+        
+    </ng-template>
+    
+    <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+    
+    <hr />
+    
+    <pre>{{ closeResult }}</pre>
     
 </body>
