@@ -9,6 +9,7 @@ import {Observable} from 'rxjs';
 export class TablesService {
   endpoint = "http://127.0.0.1:8000/";
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
+  
   pathMap:Map<string,string> = new Map<string, string>([
     ["Thing Tables", "entity/"],
     ["Attributes Tables", "atr/"],
@@ -26,6 +27,7 @@ export class TablesService {
 
   getTable(table:string): Observable<any>{
     let path:string = this.pathMap.get(table);
-    return this.http.get(this.endpoint+path,{headers:this.httpHeaders});
+    let queryParams = {"scn_id":sessionStorage.getItem("scnID"),"version":sessionStorage.getItem("scnVersion")};
+    return this.http.get(this.endpoint+path,{headers:this.httpHeaders,params:queryParams});
   }
 }

@@ -38,8 +38,10 @@ export class ScenarioListComponent implements OnInit {
       }
     )
   }
-  viewScn(scnID){
-    sessionStorage.setItem("scnID",scnID)
+  viewScn(scnID,version,scnName){
+    sessionStorage.setItem("scnID",scnID);
+    sessionStorage.setItem("scnVersion",version);
+    sessionStorage.setItem("scnName",scnName);
   }
   onSubmit(f:NgForm){
     // console.log(f.value)

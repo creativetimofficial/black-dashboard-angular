@@ -14,10 +14,17 @@ export class DashboardComponent implements OnInit {
   public clicked: boolean = true;
   public clicked1: boolean = false;
   public clicked2: boolean = false;
-
+  public scnId:number;
+  public scnVersion:number;
+  public scnName:string;
   constructor() {}
 
   ngOnInit() {
+
+    this.scnId = Number(sessionStorage.getItem("scnID"));
+    this.scnVersion = Number(sessionStorage.getItem("scnVersion"));
+    this.scnName = sessionStorage.getItem("scnName")
+
     var gradientChartOptionsConfigurationWithTooltipBlue: any = {
       maintainAspectRatio: false,
       legend: {
