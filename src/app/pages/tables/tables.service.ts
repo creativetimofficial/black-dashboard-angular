@@ -15,12 +15,14 @@ export class TablesService {
     ["Attributes Tables", "atr/"],
     ["Accounts Tables", "acc/"],
     ["Adjustments Tables","adj/"],
+    ["Relationships Tables","rel/"],
   ]);
   tableKeyMap:Map<string,string> = new Map<string, string>([
     ["Thing Tables", "entities"],
     ["Attributes Tables", "attributes"],
     ["Accounts Tables", "accounts"],
     ["Adjustments Tables","adjustments"],
+    ["Relationships Tables", "relationships"],
   ]);
 
   constructor(private http:HttpClient) { }
