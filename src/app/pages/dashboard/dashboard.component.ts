@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import Chart from 'chart.js';
+import { PeriodService } from 'src/app/services/period.service';
 
 @Component({
   selector: "app-dashboard",
@@ -17,14 +18,21 @@ export class DashboardComponent implements OnInit {
   public scnId:number;
   public scnVersion:number;
   public scnName:string;
-  constructor() {}
+  period:string = "NONE";
+  constructor(private periodService:PeriodService) {}
 
   ngOnInit() {
 
     this.scnId = Number(sessionStorage.getItem("scnID"));
     this.scnVersion = Number(sessionStorage.getItem("scnVersion"));
-    this.scnName = sessionStorage.getItem("scnName")
-
+    this.scnName = sessionStorage.getItem("scnName");
+    this.period = this.periodService.getPeriod()
+    // this.periodService.getPeriod().subscribe(
+    //   data =>{
+    //     this.period = data;
+    //   }
+    // );
+    
     var gradientChartOptionsConfigurationWithTooltipBlue: any = {
       maintainAspectRatio: false,
       legend: {
@@ -474,4 +482,5 @@ export class DashboardComponent implements OnInit {
     this.myChartData.data.datasets[0].data = this.data;
     this.myChartData.update();
   }
+
 }

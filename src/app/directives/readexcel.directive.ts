@@ -32,13 +32,14 @@ export class ReadexcelDirective {
     fileReader.onload=(e)=>{
       const bufferArray = e.target.result;
 
-      const wb:XLSX.WorkBook =  XLSX.read(bufferArray,{type:'buffer'});
+      const wb:XLSX.WorkBook =  XLSX.read(bufferArray,{type:'buffer',cellDates:true});
       let sheets = wb.Sheets;
       let sheetMap:Map<string,any> = new Map<string,any>();
       for (var i = 0; i < wb.SheetNames.length; ++i) {
         var ws = wb.Sheets[wb.SheetNames[i]];
         const data = XLSX.utils.sheet_to_json(ws)
         sheetMap.set(wb.SheetNames[i],data);
+        console.log(sheetMap)
         // subscriber.next(data);
       }
         
