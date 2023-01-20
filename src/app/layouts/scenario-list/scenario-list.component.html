@@ -19,15 +19,15 @@
                         <div class=" card">
                             <div class=" card-header">
                                 <h4 class=" card-title">Scenarios</h4>
-                                <button class = "btn btn-light" (click)="open(content)">Test Add</button>
+                                <button class = "btn btn-light" (click)="open(content)">Add Scenario</button>
                             </div>
                             <div class=" card-body">
                                 <div class=" table-responsive">
                                     <table class=" table tablesorter" id="">
                                         <thead class=" text-primary">
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Current Version</th>
+                                                
+                                                <th>Scenario</th>
                                                 <th>Name</th>
                                                 
                                                 
@@ -36,8 +36,7 @@
                                         </thead>
                                         <tbody>
                                             <tr *ngFor="let scn of scenarios.scenarios">
-                                                <td>{{scn.scn_id}}</td>
-                                                <td>{{scn.version}}</td>
+                                                <td>{{scn.scn_id}}.{{scn.version}}</td>
                                                 <td>{{scn.name}}</td>
                                                 
                                                 <td class=" text-center"><button class = "btn btn-light" (click)="viewScn(scn.scn_id,scn.version,scn.name)"[routerLink]="['dashboard']">View</button></td>
@@ -58,7 +57,7 @@
     <ng-template #content let-modal >
        
             <div class="modal-header">
-                <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                <h4 class="modal-title" id="modal-basic-title">Create Scenario</h4>
                 <button type="button" class="btn btn-warning" (click)="modal.dismiss('Cross click')">X</button>
             </div>
             <div class="modal-body">

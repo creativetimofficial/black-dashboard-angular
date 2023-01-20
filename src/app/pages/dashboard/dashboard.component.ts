@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import Chart from 'chart.js';
 import { PeriodService } from 'src/app/services/period.service';
-
+import { NgForm } from '@angular/forms';
+import {ModalDismissReasons,NgbModal} from '@ng-bootstrap/ng-bootstrap'
+import { DashboardService } from './dashboard.service';
 @Component({
   selector: "app-dashboard",
   templateUrl: "dashboard.component.html"
@@ -18,20 +20,99 @@ export class DashboardComponent implements OnInit {
   public scnId:number;
   public scnVersion:number;
   public scnName:string;
-  period:string = "NONE";
-  constructor(private periodService:PeriodService) {}
+  period:string = "N/A";
+  versions:any[]=[];
+  closeResult:string;
+  constructor(private periodService:PeriodService,private modalService:NgbModal, private dashboardService:DashboardService) {}
 
+  onSubmit(f:NgForm){
+    this.createPeriod(f.value)
+    this.pullPeriod()
+    this.ngOnInit()
+    
+    // console.log("nice")
+  }
+  createPeriod = (f) => {
+    console.log(f.id)
+    this.dashboardService.createPeriod(f).subscribe(
+      data => {
+        // this.scenarios.push(data);
+
+      },
+      error => {
+        console.log(error);
+      }
+    );
+    
+  }
+
+  pushVersionLog = () =>{
+
+    this.dashboardService.getVersionLog().subscribe(
+      data =>{
+       
+        for(let v in data["scenarios"]){
+          this.versions.push(data["scenarios"][v])
+          // console.log(v)
+          // this.versions.push(v)
+        }
+      }
+    );
+  }
+
+	open(content) {
+		this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+			(result) => {
+				this.closeResult = `Closed with: ${result}`;
+			},
+			(reason) => {
+				this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+			},
+		);
+	}
+
+	private getDismissReason(reason: any): string {
+		if (reason === ModalDismissReasons.ESC) {
+			return 'by pressing ESC';
+		} else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+			return 'by clicking on a backdrop';
+		} else {
+			return `with: ${reason}`;
+		}
+	}
+  pullPeriod(){
+    this.periodService.pullPeriod().subscribe(
+      data =>{
+        let period_list = [];
+          // console.log(data)
+          let periods = Array.from(Object.keys(data));
+
+          // UPDATE THIS TO DISPLAY DATE RANGE AND MOVE TO SERVICE
+          for (let p of periods){
+            
+            for(let name in data[p]){
+              // console.log(data[p][name])
+              period_list.push(data[p][name])
+            }
+            break;
+          }
+          // console.log("hi hi ")
+          let period_string = period_list[0]["period"];
+          if (period_list.length>1){
+            period_string = period_list[0]["period"] + " - " + period_list[period_list.length-1]["period"]
+          }
+
+          // console.log(period_string)
+          this.period= period_string
+      });
+  }
   ngOnInit() {
 
     this.scnId = Number(sessionStorage.getItem("scnID"));
     this.scnVersion = Number(sessionStorage.getItem("scnVersion"));
     this.scnName = sessionStorage.getItem("scnName");
-    this.period = this.periodService.getPeriod()
-    // this.periodService.getPeriod().subscribe(
-    //   data =>{
-    //     this.period = data;
-    //   }
-    // );
+    this.pullPeriod()
+    this.pushVersionLog()
     
     var gradientChartOptionsConfigurationWithTooltipBlue: any = {
       maintainAspectRatio: false,
@@ -484,3 +565,4 @@ export class DashboardComponent implements OnInit {
   }
 
 }
+

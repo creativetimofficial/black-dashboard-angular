@@ -7,10 +7,11 @@
         <div class=" card-header">
           <div class=" row">
             <div class=" col-sm-4 text-left">
-              <h5 class=" card-category">Version: {{scnVersion}}</h5>
+              <h5 class=" card-category">Version: {{scnVersion}}, Period: {{period}}</h5>
               
               
-              <h2 class=" card-title">SCENARIO {{scnId}}, {{scnName}} {{period}}</h2>
+              <h2 class=" card-title">SCENARIO {{scnId}}, {{scnName}} </h2>
+              <button class = "btn btn-light" (click)="open(content)">Create/Update Period</button>
 
             </div>
 
@@ -72,6 +73,45 @@
       </div>
     </div>
   </div>
+  <ng-template #content let-modal >
+       
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Create/Update Period</h4>
+        <button type="button" class="btn btn-warning" (click)="modal.dismiss('Cross click')">X</button>
+    </div>
+    <div class="modal-body">
+        
+        
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                
+                <div clas = "input-group">
+                    <label for ="period_start" ></label>
+                    <input name="period_start" class = "form-control" ngModel required #first="ngModel">
+                </div>
+                <div clas = "input-group">
+                  <label for ="period_end" ></label>
+                  <input name="period_end" class = "form-control" ngModel required #first="ngModel">
+              </div>
+               <div clas = "input-group">
+                  <label for ="begin_date" ></label>
+                  <input name="begin_date" class = "form-control" ngModel required #first="ngModel">
+              </div>
+              <div clas = "input-group">
+                  <label for ="end_date" ></label>
+                  <input name="end_date" class = "form-control" ngModel required #first="ngModel">
+              </div>
+                <div clas = "input-group">
+                    <button>Submit</button>
+                </div>
+                
+              </form>
+        
+    </div>
+
+
+
+</ng-template>
+
   <div class=" row">
     <div class=" col-lg-6 col-md-12">
       <div class=" card card-tasks">
@@ -176,55 +216,19 @@
             <table class=" table tablesorter" id="">
               <thead class=" text-primary">
                 <tr>
-                  <th>Name</th>
-                  <th>Country</th>
-                  <th>City</th>
-                  <th class=" text-center">Salary</th>
+                  <th>Version</th>
+                  <th>Modify Date</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td>Niger</td>
-                  <td>Oud-Turnhout</td>
-                  <td class=" text-center">$36,738</td>
+                <tr *ngFor="let v of versions">
+                  <td>{{v.version}}</td>
+                  <td>{{v.modify_date|date}}</td>
+                  <td></td>
+                  <td class=" text-center"><a>Revert</a></td>
                 </tr>
-                <tr>
-                  <td>Minerva Hooper</td>
-                  <td>CuraÃ§ao</td>
-                  <td>Sinaai-Waas</td>
-                  <td class=" text-center">$23,789</td>
-                </tr>
-                <tr>
-                  <td>Sage Rodriguez</td>
-                  <td>Netherlands</td>
-                  <td>Baileux</td>
-                  <td class=" text-center">$56,142</td>
-                </tr>
-                <tr>
-                  <td>Philip Chaney</td>
-                  <td>Korea, South</td>
-                  <td>Overland Park</td>
-                  <td class=" text-center">$38,735</td>
-                </tr>
-                <tr>
-                  <td>Doris Greene</td>
-                  <td>Malawi</td>
-                  <td>Feldkirchen in KÃ¤rnten</td>
-                  <td class=" text-center">$63,542</td>
-                </tr>
-                <tr>
-                  <td>Mason Porter</td>
-                  <td>Chile</td>
-                  <td>Gloucester</td>
-                  <td class=" text-center">$78,615</td>
-                </tr>
-                <tr>
-                  <td>Jon Porter</td>
-                  <td>Portugal</td>
-                  <td>Gloucester</td>
-                  <td class=" text-center">$98,615</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>

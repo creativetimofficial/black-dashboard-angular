@@ -47,6 +47,7 @@ export class ScenarioListComponent implements OnInit {
     // console.log(f.value)
 
     this.createScenario(f.value)
+    this.ngOnInit()
   }
 
   createScenario = (f) => {
