@@ -27,11 +27,6 @@
     outline: $pagination-focus-outline;
     box-shadow: $pagination-focus-box-shadow;
   }
-
-  // Opinionated: add "hand" cursor to non-disabled .page-link elements
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
-  }
 }
 
 .page-item {
@@ -64,15 +59,26 @@
   }
 }
 
-
 //
 // Sizing
 //
 
 .pagination-lg {
-  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+  @include pagination-size(
+    $pagination-padding-y-lg,
+    $pagination-padding-x-lg,
+    $font-size-lg,
+    $line-height-lg,
+    $border-radius-lg
+  );
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+  @include pagination-size(
+    $pagination-padding-y-sm,
+    $pagination-padding-x-sm,
+    $font-size-sm,
+    $line-height-sm,
+    $border-radius-sm
+  );
 }

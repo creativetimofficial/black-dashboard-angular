@@ -1,0 +1,122 @@
+.nav-pills-neutral {
+  .nav-item {
+    .nav-link {
+      background-color: $opacity-2;
+      color: $white;
+
+      &.active {
+        &,
+        &:focus,
+        &:hover {
+          background-color: $white;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.nav-pills-primary {
+  .nav-item {
+    .nav-link.active {
+      &,
+      &:focus,
+      &:hover {
+        @include diagonal-gradient($primary, $primary-states);
+      }
+    }
+  }
+}
+
+.nav-pills-info {
+  .nav-item {
+    .nav-link.active {
+      &,
+      &:focus,
+      &:hover {
+        @include diagonal-gradient($info, $info-states);
+      }
+    }
+  }
+}
+
+.nav-pills-success {
+  .nav-item {
+    .nav-link.active {
+      &,
+      &:focus,
+      &:hover {
+        @include diagonal-gradient($success, $success-states);
+      }
+    }
+  }
+}
+
+.nav-pills-warning {
+  .nav-item {
+    .nav-link.active {
+      &,
+      &:focus,
+      &:hover {
+        @include diagonal-gradient($warning, $warning-states);
+      }
+    }
+  }
+}
+
+.nav-pills-danger {
+  .nav-item {
+    .nav-link.active {
+      &,
+      &:focus,
+      &:hover {
+        @include diagonal-gradient($danger, $danger-states);
+      }
+    }
+  }
+}
+.nav-pills-icons .nav-item .nav-link {
+  border-radius: 0.25rem !important;
+}
+
+.vertical-pills {
+  display: flex;
+  .nav-pills.nav-stacked {
+    border-bottom: none !important;
+    .flex-column {
+      width: 25%;
+    }
+    & + .tab-content {
+      width: 75%;
+      float: left;
+      padding-left: 30px;
+    }
+  }
+}
+.nav-pills-just-icons .nav-pills .nav-item .nav-link {
+  border-radius: 50% !important;
+  height: 80px;
+  max-width: 80px;
+  min-width: auto;
+  padding: 0;
+  width: 80px;
+  .tim-icons {
+    font-size: 24px;
+    line-height: 80px;
+  }
+}
+.nav-pills-lg .nav-pills {
+  .nav-item {
+    .nav-link {
+      padding: 11px 60px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav-pills-lg .nav-pills .nav-item .nav-link {
+    padding: 11px 45px;
+  }
+}
+.justify-content-center .nav-pills {
+  justify-content: center !important;
+}

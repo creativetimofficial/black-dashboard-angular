@@ -1,0 +1,188 @@
+@mixin tag-input-theme($theme) {
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+
+  transition: map-get($theme, transition);
+
+  padding: map-get($theme, "container-padding");
+  min-height: map-get($theme, "container-height");
+
+  cursor: text;
+
+  border-bottom: none !important;
+  box-shadow: map-get($theme, "box-shadow");
+  border-radius: map-get($theme, "border-radius");
+
+  form {
+    input {
+      background: transparent;
+    }
+  }
+}
+
+@mixin error-message($theme) {
+  font-size: map-get($theme, "error-message-font-size");
+  color: map-get($theme, "error-message");
+  margin: map-get($theme, "error-message-margin");
+}
+
+@mixin tag-theme($theme) {
+  display: inline-block;
+
+  font-family: map-get($theme, "font-family");
+  font-weight: map-get($theme, "font-weight");
+  font-size: map-get($theme, "font-size");
+  letter-spacing: map-get($theme, "letter-spacing");
+
+  color: map-get($theme, "color");
+  border-radius: map-get($theme, "border-radius");
+  border: map-get($theme, "border");
+
+  transition: map-get($theme, "transition");
+
+  margin: map-get($theme, "margin");
+  padding: map-get($theme, "padding");
+
+  height: map-get($theme, "height");
+  max-height: map-get($theme, "max-height");
+
+  line-height: map-get($theme, "line-height");
+
+  background: map-get($theme, "background");
+  text-transform: map-get($theme, "text-transform");
+  -webkit-transition: all 170ms linear;
+  -moz-transition: all 170ms linear;
+  -o-transition: all 170ms linear;
+  -ms-transition: all 170ms linear;
+  transition: all 170ms linear;
+
+  &:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover {
+    background: map-get($theme, "background-hover");
+    color: map-get($theme, "color-hover");
+  }
+
+  &:hover {
+    padding-right: 25px;
+    box-shadow: none !important;
+    svg {
+      opacity: 1;
+    }
+  }
+  .tag-wrapper {
+    display: block;
+  }
+}
+
+@mixin tag-input-form-theme($theme) {
+  display: inline;
+  vertical-align: middle;
+
+  border: map-get($theme, "input-border");
+  padding: map-get($theme, "input-padding");
+  height: map-get($theme, "input-height");
+
+  font-size: map-get($theme, "input-font-size");
+  font-family: map-get($theme, "font-family");
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin icon-theme($theme) {
+  width: map-get($theme, "width");
+  height: map-get($theme, "height");
+  display: map-get($theme, "display");
+  text-align: right;
+  transform: map-get($theme, "transform");
+
+  path {
+    fill: map-get($theme, "fill");
+  }
+
+  svg {
+    vertical-align: middle;
+    height: 13px;
+    opacity: 0;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+  }
+
+  &:not(.readonly):not(.tag--editing):focus {
+    color: map-get($theme, "color-focused");
+  }
+
+  &:not(.readonly):not(.tag--editing):active {
+    color: map-get($theme, "color-active");
+  }
+
+  &:not(:focus):not(.tag--editing):not(:active):not(.readonly):hover {
+    color: map-get($theme, "color-hover");
+  }
+}
+
+@mixin icon-theme-focused($theme) {
+  path {
+    fill: map-get($theme, "fill-focus");
+  }
+}
+
+$regular-primary: $default;
+$regular-primary-dark: darken($regular-primary, 10%);
+
+// this is the container's theme
+$regular-theme: (// container-border-bottom: 1px solid $regular-primary);
+);
+
+// this is the tag's theme
+$regular-tag-theme: (
+  background: $danger !important,
+  background-focused: $danger,
+  background-active: $danger,
+  background-hover: $danger,
+  color: #fff,
+  color-hover: #fff,
+  color-active: #fff,
+  color-focused: #fff,
+  cursor: pointer,
+  margin: 10px 3px 5px 0,
+  height: auto,
+  max-height: 22px,
+  position: relative,
+  padding: 0px 0.8em 0px 0.8em,
+  border-radius: 12px,
+  font-size: 0.75em,
+  font-weight: 500,
+  display: inline-block,
+  line-height: 2.1em,
+  text-transform: uppercase,
+  transition: all 170ms linear
+);
+
+// this is the delete icon's theme
+$regular-icon-theme: (
+  fill: #fff,
+  fill-focus: #fff,
+  transform: none,
+  color-hover: #fff,
+  color-active: #fff,
+  color-focused: #fff
+);
+
+// apply theme to the container
+.ng2-tag-input.regular-theme {
+  @include tag-input-theme($regular-theme);
+}
+
+// apply theme to the tags
+.ng2-tag-input.regular-theme tag {
+  @include tag-theme($regular-tag-theme);
+}
+
+// apply theme to the delete icon
+.ng2-tag-input.regular-theme tag delete-icon {
+  @include icon-theme($regular-icon-theme);
+}

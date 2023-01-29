@@ -3,11 +3,48 @@
   left: 0;
   right: unset;
   .dropdown-menu {
-      left: 80px!important;
-      right: auto!important;
+    left: 80px !important;
+    right: auto !important;
   }
 }
-.rtl .off-canvas-sidebar .nav li.active>a:not([data-toggle=collapse]):before, .rtl .sidebar .nav li.active>a:not([data-toggle=collapse]):before {
-    left: unset;
+.rtl
+  .off-canvas-sidebar
+  .nav
+  li.active
+  > a:not([data-toggle="collapse"]):before,
+.rtl .sidebar .nav li.active > a:not([data-toggle="collapse"]):before {
+  left: unset;
+  right: -4px;
+}
+.rtl .alert.alert-with-icon {
+  padding-left: 65px !important;
+  padding-right: 65px !important;
+}
+.rtl .toast-close-button {
+  float: left !important;
+  right: auto !important;
+  left: 10px !important;
+}
+.rtl .tim-icons {
+  float: right !important;
+  right: 10px !important;
+  left: auto !important;
+}
+.rtl {
+  .sidebar .nav li.active > a[data-toggle="collapse"]:before,
+  .sidebar
+    .nav
+    li.active
+    > a[data-toggle="collapse"]
+    + div
+    .nav
+    .active
+    a:before {
     right: -4px;
+    left: auto;
+  }
+  .sidebar .logo a.logo-mini {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }

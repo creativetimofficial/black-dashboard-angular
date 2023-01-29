@@ -1,17 +1,19 @@
-/*
- =========================================================
- * Black Dashboard Angular - v1.2.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/black-dashboard-angular
- * Copyright 2020 Creative Tim (https://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+/*!
 
  =========================================================
+ * Black Dashboard Pro Angular - v1.3.0
+ =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * Product Page: http://creative-tim.com/product/black-dashboard-pro-angular
+ * Copyright 2021 Creative Tim (http://www.creative-tim.com)
 
-*/
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
 .tim-row {
   margin-bottom: 20px;
 }
@@ -29,7 +31,6 @@
 }
 
 .typography-line span {
-  bottom: 10px;
   color: #c0c1c2;
   display: block;
   font-weight: 400;
@@ -49,6 +50,11 @@
   margin-top: 0;
 }
 
+.offline-doc .page-header:before {
+  content: "";
+  background: rgba(0, 0, 0, .75);
+}
+
 .offline-doc .page-header {
   display: flex;
   align-items: center;
@@ -63,15 +69,8 @@
   z-index: 1;
 }
 
-@media all and (min-width: 992px) {
-  .sidebar .nav>li.active-pro {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-  }
-}
-
-.card.card-upgrade .card-category {
-  max-width: 530px;
-  margin: 0 auto;
+#map {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }

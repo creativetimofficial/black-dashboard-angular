@@ -9,7 +9,6 @@
 // Navbar position
 // Navbar themes
 
-
 // Navbar
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
@@ -34,7 +33,6 @@
   }
 }
 
-
 // Navbar brand
 //
 // Used for brand, project, or site names.
@@ -44,7 +42,7 @@
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-padding-x;
-  font-size: $navbar-brand-font-size;
+  @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
 
@@ -52,7 +50,6 @@
     text-decoration: none;
   }
 }
-
 
 // Navbar nav
 //
@@ -65,7 +62,7 @@
   margin-bottom: 0;
   list-style: none;
 
-  .nav-link {
+  .nav-link:not(.btn) {
     padding-right: 0;
     padding-left: 0;
   }
@@ -76,7 +73,6 @@
   }
 }
 
-
 // Navbar text
 //
 //
@@ -86,7 +82,6 @@
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
 }
-
 
 // Responsive navbar
 //
@@ -107,7 +102,7 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
-  font-size: $navbar-toggler-font-size;
+  @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
@@ -115,11 +110,6 @@
 
   @include hover-focus {
     text-decoration: none;
-  }
-
-  // Opinionated: add "hand" cursor to non-disabled .navbar-toggler elements
-  &:not(:disabled):not(.disabled) {
-    cursor: pointer;
   }
 }
 
@@ -175,7 +165,7 @@
         }
 
         .navbar-collapse {
-          display: flex !important;  // stylelint-disable-line declaration-no-important
+          display: flex !important; // stylelint-disable-line declaration-no-important
 
           // Changes flex-bases to auto because of an IE10 bug
           flex-basis: auto;
@@ -189,7 +179,6 @@
   }
 }
 
-
 // Navbar themes
 //
 // Styles for switching between navbars with light or dark background.
@@ -197,10 +186,10 @@
 // Dark links against a light background
 .navbar-light {
   .navbar-brand {
-    color: $navbar-light-active-color;
+    color: $navbar-light-brand-color;
 
     @include hover-focus {
-      color: $navbar-light-active-color;
+      color: $navbar-light-brand-hover-color;
     }
   }
 
@@ -249,10 +238,10 @@
 // White links against a dark background
 .navbar-dark {
   .navbar-brand {
-    color: $navbar-dark-active-color;
+    color: $navbar-dark-brand-color;
 
     @include hover-focus {
-      color: $navbar-dark-active-color;
+      color: $navbar-dark-brand-hover-color;
     }
   }
 

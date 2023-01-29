@@ -9,7 +9,7 @@
 
   > .btn {
     position: relative;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
@@ -21,14 +21,6 @@
     &.active {
       z-index: 1;
     }
-  }
-
-  // Prevent double borders when buttons are next to each other
-  .btn + .btn,
-  .btn + .btn-group,
-  .btn-group + .btn,
-  .btn-group + .btn-group {
-    margin-left: -$btn-border-width;
   }
 }
 
@@ -44,8 +36,10 @@
 }
 
 .btn-group {
-  > .btn:first-child {
-    margin-left: 0;
+  // Prevent double borders when buttons are next to each other
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
+    margin-left: -$btn-border-width;
   }
 
   // Reset rounded corners
@@ -64,17 +58,20 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
-
+.btn-group-sm > .btn {
+  @extend .btn-sm;
+}
+.btn-group-lg > .btn {
+  @extend .btn-lg;
+}
 
 //
 // Split button dropdowns
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: $btn-padding-x * 0.75;
+  padding-left: $btn-padding-x * 0.75;
 
   &::after,
   .dropup &::after,
@@ -88,15 +85,14 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-right: $btn-padding-x-sm * 0.75;
+  padding-left: $btn-padding-x-sm * 0.75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-right: $btn-padding-x-lg * 0.75;
+  padding-left: $btn-padding-x-lg * 0.75;
 }
-
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
@@ -109,7 +105,6 @@
   }
 }
 
-
 //
 // Vertical button groups
 //
@@ -119,17 +114,14 @@
   align-items: flex-start;
   justify-content: center;
 
-  .btn,
-  .btn-group {
+  > .btn,
+  > .btn-group {
     width: 100%;
   }
 
-  > .btn + .btn,
-  > .btn + .btn-group,
-  > .btn-group + .btn,
-  > .btn-group + .btn-group {
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
     margin-top: -$btn-border-width;
-    margin-left: 0;
   }
 
   // Reset rounded corners
@@ -143,7 +135,6 @@
     @include border-top-radius(0);
   }
 }
-
 
 // Checkbox and radio options
 //

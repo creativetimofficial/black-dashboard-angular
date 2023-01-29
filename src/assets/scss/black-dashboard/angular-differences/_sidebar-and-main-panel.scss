@@ -1,45 +1,78 @@
 .main-panel {
-  &, &[data="red"]{
+  &,
+  &[data="red"] {
     border-color: $danger;
   }
 
   .content {
-    padding: 78px 30px 30px 280px;
+    padding: 80px 30px 30px 280px;
     min-height: calc(100vh - 70px);
   }
-}
-@media screen and (max-width: 768px){
-  .main-panel .content {
-      padding-left: 15px;
-      padding-right: 15px;
+  .footer {
+    padding-left: 280px;
   }
 }
-.logo-img{
+@media screen and (max-width: 768px) {
+  .main-panel .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.logo-img {
   width: 35px;
   height: 35px;
   display: block;
   margin-left: 2px;
   position: absolute;
   top: 12px;
-    img{
-        width: 35px;
-    }
+  img {
+    width: 35px;
+  }
 }
-.sidebar, .off-canvas-sidebar{
-  &, &[data="red"]{
+.sidebar:before,
+.off-canvas-sidebar:before {
+  border-bottom: 5px solid $danger;
+}
+.sidebar,
+.off-canvas-sidebar {
+  &,
+  &[data="red"] {
     @include linear-gradient($danger-states, $danger);
   }
-  &[data="primary"]{
+  &[data="primary"] {
     @include linear-gradient($primary-states, $primary);
   }
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .main-panel {
-      .content {
+    .content {
       padding-left: 30px !important;
     }
   }
-  .fixed-plugin .dropdown-toggle:after{
+  .fixed-plugin .dropdown-toggle:after {
     display: none;
+  }
+  #bodyClick {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      opacity: 1;
+      top: 0;
+      right: 0;
+      left: 260px;
+      content: "";
+      z-index: 9999;
+      overflow-x: hidden;
+      background-color: transparent;
+      transition: all .5s cubic-bezier(.685,.0473,.346,1);
+  }
+  .nav-open .rtl .wrapper{
+    transform: none;
+  }
+}
+@media (min-width: 992px) {
+  .sidebar-mini .main-panel .content,
+  .sidebar-mini footer {
+    padding-left: 130px !important;
   }
 }

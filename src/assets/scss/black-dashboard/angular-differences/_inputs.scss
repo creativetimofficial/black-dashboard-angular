@@ -1,0 +1,29 @@
+// textarea.form-control:focus {
+//     border: 1px solid $danger;
+//     border-radius: .4285rem;
+// }
+
+.form-group:not(.has-danger):not(.has-success) .form-control:focus,
+.form-group:not(.has-danger):not(.has-success)
+  .input-group-append
+  .input-group-text,
+.form-group:not(.has-danger):not(.has-success)
+  .input-group-prepend
+  .input-group-text,
+.input-group-focus:not(.has-danger):not(.has-success) .form-control:focus,
+.input-group-focus:not(.has-danger):not(.has-success)
+  .input-group-append
+  .input-group-text,
+.input-group-focus:not(.has-danger):not(.has-success)
+  .input-group-prepend
+  .input-group-text {
+  border-color: $danger;
+}
+textarea.form-control:active,
+textarea.form-control:focus {
+  border: 1px solid #e564d1;
+}
+textarea.form-control {
+  border: 1px solid #2b3553;
+  border-radius: 0.4285rem;
+}

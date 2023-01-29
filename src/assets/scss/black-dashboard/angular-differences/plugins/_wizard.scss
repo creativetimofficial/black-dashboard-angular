@@ -1,0 +1,20 @@
+.wizard-container .card-wizard {
+  .progress-bar {
+    background: $white !important;
+    .progress-bar {
+      background: $danger !important;
+    }
+  }
+  .nav-pills .nav-item {
+    width: 33%;
+    position: relative !important;
+    .step {
+      width: 46px !important;
+      height: 45px;
+      position: absolute;
+      .tim-icons {
+        padding: 13px 0 15px 0 !important;
+      }
+    }
+  }
+}

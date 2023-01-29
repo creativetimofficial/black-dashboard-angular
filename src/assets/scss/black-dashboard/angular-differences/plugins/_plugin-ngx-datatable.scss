@@ -1,0 +1,113 @@
+ngx-datatable {
+  .datatable-row-wrapper {
+    border-top: 0.0625rem solid #e3e3e3;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.ngx-datatable.bootstrap
+    .datatable-body
+    .datatable-body-row
+    .datatable-body-cell {
+    margin: auto;
+    // padding: 7px 5px;
+    color: $white;
+    padding: 12px 7px;
+    vertical-align: middle;
+  }
+  &.ngx-datatable.bootstrap .datatable-footer {
+    .pager {
+      margin: 2px 0;
+      white-space: nowrap;
+      -ms-flex-pack: end !important;
+      justify-content: flex-end !important;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      border-radius: 0.25rem;
+      li a {
+        border: 0;
+        border-radius: 30px !important;
+        transition: all 0.3s;
+        padding: 0px 11px;
+        margin: 0 3px;
+        min-width: 30px;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        color: $white;
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+        background: transparent;
+        outline: none;
+        z-index: 1;
+        position: relative;
+        display: block;
+      }
+      li.disabled {
+        opacity: 0.5;
+      }
+    }
+    .page-count {
+      color: $white;
+    }
+  }
+  &.ngx-datatable.bootstrap .datatable-footer .datatable-pager .pager li a i {
+    border-radius: 30px !important;
+    transition: all 0.3s;
+    line-height: 35px;
+  }
+  &.ngx-datatable.bootstrap
+    .datatable-footer
+    .datatable-pager
+    ul
+    li:not(.disabled).active
+    a {
+    background-color: $danger;
+    color: $white;
+    font-weight: inherit;
+  }
+  &.ngx-datatable.bootstrap
+    .datatable-footer
+    .datatable-pager
+    ul
+    li:not(.disabled):not(.active):hover
+    a {
+    background-color: $opacity-gray-3;
+    font-weight: inherit;
+  }
+  &.ngx-datatable.bootstrap .datatable-header .datatable-header-cell:last-child,
+  &.ngx-datatable.bootstrap .datatable-body .datatable-body-cell:last-child {
+    text-align: right;
+  }
+  &.ngx-datatable .datatable-header .datatable-header-cell {
+    font-size: 1.45em;
+    font-weight: 300;
+
+    .sort-btn:after {
+      opacity: 0.4;
+      content: "\f0dc";
+      position: relative;
+      display: inline-block;
+      bottom: 1px;
+      right: -7px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 12px;
+    }
+    .sort-btn.sort-asc.datatable-icon-up:after {
+      content: "\f0de";
+      opacity: 0.8;
+      top: 2px;
+    }
+    .sort-btn.sort-desc.datatable-icon-down:after {
+      content: "\f0dd";
+      opacity: 0.8;
+      top: -3px;
+    }
+    .sort-btn:before {
+      display: none !important;
+    }
+  }
+}

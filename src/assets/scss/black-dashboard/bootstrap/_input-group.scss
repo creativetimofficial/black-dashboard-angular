@@ -12,6 +12,7 @@
   width: 100%;
 
   > .form-control,
+  > .form-control-plaintext,
   > .custom-select,
   > .custom-file {
     position: relative; // For focus state's z-index
@@ -42,8 +43,12 @@
 
   > .form-control,
   > .custom-select {
-    &:not(:last-child) { @include border-right-radius(0); }
-    &:not(:first-child) { @include border-left-radius(0); }
+    &:not(:last-child) {
+      @include border-right-radius(0);
+    }
+    &:not(:first-child) {
+      @include border-left-radius(0);
+    }
   }
 
   // Custom file inputs have more complex markup, thus requiring different
@@ -53,11 +58,14 @@
     align-items: center;
 
     &:not(:last-child) .custom-file-label,
-    &:not(:last-child) .custom-file-label::after { @include border-right-radius(0); }
-    &:not(:first-child) .custom-file-label { @include border-left-radius(0); }
+    &:not(:last-child) .custom-file-label::after {
+      @include border-right-radius(0);
+    }
+    &:not(:first-child) .custom-file-label {
+      @include border-left-radius(0);
+    }
   }
 }
-
 
 // Prepend and append
 //
@@ -75,6 +83,10 @@
   .btn {
     position: relative;
     z-index: 2;
+
+    &:focus {
+      z-index: 3;
+    }
   }
 
   .btn + .btn,
@@ -85,9 +97,12 @@
   }
 }
 
-.input-group-prepend { margin-right: -$input-border-width; }
-.input-group-append { margin-left: -$input-border-width; }
-
+.input-group-prepend {
+  margin-right: -$input-border-width;
+}
+.input-group-append {
+  margin-left: -$input-border-width;
+}
 
 // Textual addons
 //
@@ -99,7 +114,7 @@
   align-items: center;
   padding: $input-padding-y $input-padding-x;
   margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
-  font-size: $font-size-base; // Match inputs
+  @include font-size($input-font-size); // Match inputs
   font-weight: $font-weight-normal;
   line-height: $input-line-height;
   color: $input-group-addon-color;
@@ -116,36 +131,49 @@
   }
 }
 
-
 // Sizing
 //
 // Remix the default form control sizing classes into new ones for easier
 // manipulation.
 
+.input-group-lg > .form-control:not(textarea),
+.input-group-lg > .custom-select {
+  height: $input-height-lg;
+}
+
 .input-group-lg > .form-control,
+.input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  height: $input-height-lg;
   padding: $input-padding-y-lg $input-padding-x-lg;
-  font-size: $font-size-lg;
+  @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
   @include border-radius($input-border-radius-lg);
 }
 
+.input-group-sm > .form-control:not(textarea),
+.input-group-sm > .custom-select {
+  height: $input-height-sm;
+}
+
 .input-group-sm > .form-control,
+.input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  height: $input-height-sm;
   padding: $input-padding-y-sm $input-padding-x-sm;
-  font-size: $font-size-sm;
+  @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
   @include border-radius($input-border-radius-sm);
 }
 
+.input-group-lg > .custom-select,
+.input-group-sm > .custom-select {
+  padding-right: $custom-select-padding-x + $custom-select-indicator-padding;
+}
 
 // Prepend and append rounded corners
 //
@@ -153,13 +181,16 @@
 // border-radius values when extending. They're more specific than we'd like
 // with the `.input-group >` part, but without it, we cannot override the sizing.
 
-
 .input-group > .input-group-prepend > .btn,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
-.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+.input-group
+  > .input-group-append:last-child
+  > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group
+  > .input-group-append:last-child
+  > .input-group-text:not(:last-child) {
   @include border-right-radius(0);
 }
 
@@ -168,6 +199,8 @@
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+.input-group
+  > .input-group-prepend:first-child
+  > .input-group-text:not(:first-child) {
   @include border-left-radius(0);
 }

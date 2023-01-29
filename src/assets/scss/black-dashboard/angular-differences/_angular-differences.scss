@@ -2,4 +2,20 @@
 @import "charts";
 @import "rtl";
 @import "nucleo-icons";
+@import "inputs";
+@import "pills";
+@import "tabs";
+@import "dropdowns";
+@import "fixed-plugin";
+@import "navbar";
+@import "datepicker";
+
 @import "./plugins/ngx-toastr";
+@import "./plugins/plugin-angular2-multiselect-dropdown";
+@import "./plugins/plugin-ngx-chips";
+@import "./plugins/wizard";
+@import "./plugins/plugin-ngx-datatable";
+@import "./plugins/plugin-vector-map";
+.modal-backdrop {
+  position: static;
+}

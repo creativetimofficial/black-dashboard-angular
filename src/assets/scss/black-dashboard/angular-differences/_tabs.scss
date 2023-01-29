@@ -1,0 +1,85 @@
+.nav-tabs-primary .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $primary;
+  color: $primary;
+}
+.nav-tabs-neutral .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $opacity-5;
+  color: $white;
+}
+.nav-tabs-info .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $info;
+  color: $info;
+}
+.nav-tabs-danger .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $danger;
+  color: $danger;
+}
+.nav-tabs-warning .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $warning;
+  color: $warning;
+}
+.nav-tabs-success .nav-tabs > .nav-item > .nav-link.active {
+  border-color: $success;
+  color: $success;
+}
+
+tabset:not(.vertical-pills) .tab-content {
+  padding: 20px 0 0;
+}
+.justify-content-center .nav-tabs {
+  justify-content: center !important;
+}
+.tab-subcategories {
+  .tab-content {
+    background-color: transparent;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.checkout-btn-group .nav-tabs {
+  padding-left: 0;
+  position: relative;
+  vertical-align: middle;
+  .nav-item {
+    flex: 1 1;
+    display: flex;
+    .nav-link {
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border-color: #1d8cf8 !important;
+      padding: 4px 14px;
+      position: relative;
+      flex: 1 1 auto;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.875rem;
+      border-radius: 0.2857rem !important;
+      user-select: none;
+      overflow: hidden;
+      margin: 4px 0;
+      outline: 0 !important;
+
+      &.active {
+        background-color: #3358f4 !important;
+        background-image: linear-gradient(
+          to bottom left,
+          #1d8cf8,
+          #3358f4,
+          #1d8cf8
+        ) !important;
+        transform: translateY(-1px);
+        -webkit-transform: translateY(-1px);
+      }
+    }
+    &:not(:first-child) .nav-link {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+    &:not(:last-child) .nav-link {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+}
