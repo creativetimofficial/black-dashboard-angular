@@ -45,8 +45,18 @@ export class DashboardComponent implements OnInit {
     );
     
   }
+  createVersion = () =>{
+    this.dashboardService.newVersion().subscribe(
+      data =>{
 
+      }
+    )
+    this.ngOnInit()
+
+  }
   pushVersionLog = () =>{
+
+    this.versions = [];
 
     this.dashboardService.getVersionLog().subscribe(
       data =>{

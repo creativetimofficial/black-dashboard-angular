@@ -34,4 +34,13 @@ export class DashboardService {
     }
 
   }
+  newVersion():Observable<any>{
+    let queryParams = {
+      "scn_id":sessionStorage.getItem("scnID"),
+    }
+
+    return this.http.post(this.baseurl + 'scn/version/', queryParams,
+      {headers: this.httpHeaders});
+  }
+  
 }
