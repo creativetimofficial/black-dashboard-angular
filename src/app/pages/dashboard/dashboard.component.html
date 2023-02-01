@@ -1,171 +1,220 @@
-
 <div class=" content">
   <div class=" row">
     <div class=" col-12">
-      <div class=" card card-chart">
+      <div class=" card card-nav-tabs">
 
         <div class=" card-header">
           <div class=" row">
             <div class=" col-sm-4 text-left">
-              <h5 class=" card-category">Version: {{scnVersion}}, Period: {{period}}</h5>
-              
-              
-              <h2 class=" card-title">SCENARIO {{scnId}}, {{scnName}} </h2>
-              <button class = "btn btn-light" (click)="open(content)">Create/Update Period</button>
+              <h5 class=" card-category">Version: {{scnVersion}}</h5>
+
+
+              <h2 class=" card-title">SCENARIO {{scnId}}: {{scnName}} </h2>
+
 
             </div>
 
-            <div class=" col-sm-8 text-right">
-              <button class = "btn btn-group">Export Scenario</button>
 
-              
-            </div>
-            <!-- <div class=" col-sm-6">
-              <div
-                class=" btn-group btn-group-toggle float-right"
-                data-toggle="buttons"
-              >
-                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
-                  <input checked="checked" name="options" type="radio" />
-
-                  <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                  >
-                    Accounts
-                  </span>
-                  <span class=" d-block d-sm-none">
-                    <i class=" tim-icons icon-single-02"> </i>
-                  </span>
-                </label>
-                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
-                  <input
-                    class=" d-none d-sm-none"
-                    name="options"
-                    type="radio"
-                  />
-
-                  <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                  >
-                    Purchases
-                  </span>
-                  <span class=" d-block d-sm-none">
-                    <i class=" tim-icons icon-gift-2"> </i>
-                  </span>
-                </label>
-                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[2];updateOptions();clicked=false;clicked1=false;clicked2=true" [ngClass]="{'active':clicked2===true}">
-                  <input class=" d-none" name="options" type="radio" />
-
-                  <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
-                  >
-                    Sessions
-                  </span>
-                  <span class=" d-block d-sm-none">
-                    <i class=" tim-icons icon-tap-02"> </i>
-                  </span>
-                </label>
-              </div>
-            </div> -->
           </div>
         </div>
 
       </div>
     </div>
   </div>
-  <ng-template #content let-modal >
-       
-    <div class="modal-header">
+  <ng-template #content let-modal>
+    <div class="modal-content">
+      <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Create/Update Period</h4>
-        <button type="button" class="btn btn-warning" (click)="modal.dismiss('Cross click')">X</button>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><i
+            class="tim-icons icon-simple-remove"> </i></button>
+
+
+
+      </div>
+
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <div class="modal-body">
+
+
+
+
+          <div clas="input-group">
+
+            <label for="period_start">Starting Period</label>
+            <input name="period_start" class="form-control" ngModel required #first="ngModel" style="color:black"
+              type="text" placeholder="Example: CYE2022">
+
+          </div>
+
+          <div clas="input-group">
+
+            <label for="period_end">Ending Period</label>
+            <input name="period_end" class="form-control" ngModel required #first="ngModel" style="color:black"
+              type="text" placeholder="Example: CYE2022">
+          </div>
+
+          <div clas="input-group">
+            <label for="begin_date">Beginning Date of Starting Period</label>
+            <input name="begin_date" class="form-control" ngModel required #first="ngModel" type="date"
+              style="color:black">
+          </div>
+          <div clas="input-group">
+            <label for="end_date">End Date of Starting Period</label>
+            <input name="end_date" class="form-control" ngModel required #first="ngModel" type="date"
+              style="color:black">
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <div class="input-group">
+            <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
+          </div>
+
+        </div>
+      </form>
+
     </div>
-    <div class="modal-body">
-        
-        
-            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-                
-                <div clas = "input-group">
-                    <label for ="period_start" ></label>
-                    <input name="period_start" class = "form-control" ngModel required #first="ngModel">
-                </div>
-                <div clas = "input-group">
-                  <label for ="period_end" ></label>
-                  <input name="period_end" class = "form-control" ngModel required #first="ngModel">
-              </div>
-               <div clas = "input-group">
-                  <label for ="begin_date" ></label>
-                  <input name="begin_date" class = "form-control" ngModel required #first="ngModel">
-              </div>
-              <div clas = "input-group">
-                  <label for ="end_date" ></label>
-                  <input name="end_date" class = "form-control" ngModel required #first="ngModel">
-              </div>
-                <div clas = "input-group">
-                    <button>Submit</button>
-                </div>
-                
-              </form>
-        
+
+
+
+
+  </ng-template>
+
+
+  <div class="row">
+
+
+    <!-- Period Section -->
+    <div class=" col-lg-4 col-md-8">
+      <div class=" card card-nav-tabs">
+        <div class=" card-body">
+          <div class=" row">
+
+            <!-- <div class=" info-icon text-center icon-primary">
+                  
+                </div> -->
+            <div class="col">
+              <h4 class="text-center">Period: {{period}}</h4>
+              <p class="text-center">
+                <a href="javascript:;" routerLinkActive="active" data-target="#myModal" (click)="open(content)">
+
+                  Update Period
+
+                </a>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-lg-4 col-md-8">
+      <div class=" card card-nav-tabs">
+        <div class=" card-body">
+          <div class=" row">
+
+             <div class=" info-icon text-center icon-primary">
+                  
+                </div> 
+            <div class="col">
+              <h4 class="text-center">Export Status: Ready</h4>
+              <p class="text-center">
+                <a href="javascript:;" routerLinkActive="active" data-target="#myModal" >
+
+                  Export Scenario
+
+                </a>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
+    <div class=" col-lg-4 col-md-8">
+      <div class=" card card-nav-tabs">
+        <div class=" card-body">
+          <div class=" row">
 
-</ng-template>
+
+            <div class="col">
+              <h4 class="text-center">Scenario Notes</h4>
+              <p class="text-center">
+                <a href="javascript:;" routerLinkActive="active" data-target="#myModal" (click)="open(content)">
+
+                  View Scenario Notes
+                </a>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class=" row">
     <div class=" col-lg-6 col-md-12">
       <div class=" card card-tasks">
         <div class=" card-header">
-          <h6 class=" title d-inline">Scenario Actions</h6>
-          <div ngbDropdown>
-            
-            <button
-              class=" btn btn-link btn-icon"
-              data-toggle="dropdown"
-              ngbDropdownToggle
-              type="button"
-            >
-              
+          <h4 class="card-title">Scenario Actions</h4>
+
+          <!-- THIS DROP DOWN WORKS! REFER TO THIS DROPDOWN -->
+          <!-- <div ngbDropdown>
+
+            <button class=" btn btn-link btn-icon" data-toggle="dropdown" ngbDropdownToggle type="button">
+
               <i class=" tim-icons icon-settings-gear-63"> </i>
             </button>
-            <div
-              aria-labelledby="dropdownMenuLink"
-              class=" dropdown-menu-right"
-              ngbDropdownMenu
-            >
+            <div aria-labelledby="dropdownMenuLink" class=" dropdown-menu-right" ngbDropdownMenu>
               <a href="javascript:void(0)" ngbDropdownItem> Scenario Settings </a>
-              
+
             </div>
-          </div>
+          </div> -->
         </div>
         <div class=" card-body">
           <div class=" table-full-width table-responsive">
             <table class=" table">
               <tbody>
                 <tr>
-                  
+
                   <td>
-                    <a 
-                      routerLink="" routerLinkActive="active"
-                      class="simple-text logo-normal"
-                    >
+                    <!-- <a routerLink="" routerLinkActive="active" class="simple-text logo-normal">
                       <p class=" title">Change Scenarios</p>
                     </a>
                     <p class=" text-muted">
                       Switch to a different scenario
-                    </p>
+                    </p> -->
+                    <p class="title">
+                      <a href="#" routerLinkActive="active">
+                        Change scenario
+                      </a>
+                      <p class=" text-muted">
+                        Switch to a different scenario
+                      </p>
                   </td>
-                  
+
                 </tr>
                 <tr>
-                  
+
                   <td>
-                    <a (click)="createVersion()" ><p class=" title pe-auto">Save as new version</p></a>
-                    <p class=" text-muted">
-                      Stores a new version of current scenario
-                    </p>
+
+                    <p class="title">
+                      <a href="#" routerLinkActive="active" (click)="createVersion()">
+                        Save as new version
+                      </a>
+                      <p class=" text-muted">
+                        Stores a new version of current scenario
+                      </p>
                   </td>
-                  
+
                 </tr>
                 <tr>
                   <td>
@@ -174,7 +223,7 @@
                       Clears the accounts and adjustments tables from current scenario
                     </p>
                   </td>
-      
+
                 </tr>
                 <tr>
                   <td>
@@ -206,14 +255,15 @@
         </div>
       </div>
     </div>
+
     <div class=" col-lg-6 col-md-12">
-      <div class=" card">
+      <div class=" card card-tasks">
         <div class=" card-header">
-          <h4 class=" card-title">Scenario Version Log</h4>
+          <h4 class=" card-title">Version Log</h4>
         </div>
         <div class=" card-body">
-          <div class=" table-responsive">
-            <table class=" table tablesorter" id="">
+          <div class=" table-full-width table-responsive">
+            <table class=" table" id="">
               <thead class=" text-primary">
                 <tr>
                   <th>Version</th>
@@ -228,7 +278,7 @@
                   <td></td>
                   <td class=" text-center"><a>Revert</a></td>
                 </tr>
-                
+
               </tbody>
             </table>
           </div>
@@ -236,46 +286,49 @@
       </div>
     </div>
   </div>
-  <div class=" row">
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
+ 
+
+
+  <div class="row">
+
+
+
+    <div class=" col-lg12 col-md-12">
+      <div class=" card card-tasks">
         <div class=" card-header">
-          <h5 class=" card-category">Total Shipments</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
-          </h3>
+          <h4 class=" card-title">Calculation History</h4>
         </div>
         <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLineRed"> </canvas></div>
-        </div>
-      </div>
-    </div>
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Daily Sales</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500€
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="CountryChart"> </canvas></div>
-        </div>
-      </div>
-    </div>
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Completed Tasks</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-send text-success"> </i> 12,100K
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
+          <div class=" table-full-width table-responsive">
+            <table class=" table" id="">
+              <thead class=" text-primary">
+                <tr>
+                  <th>Status</th>
+                  <th>Calc Date</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let v of versions">
+                  <td>Success</td>
+                  <td>Jan 29,2023</td>
+                  <td>View</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+    
 
 </div>

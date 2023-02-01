@@ -1,96 +1,119 @@
-
 <body>
     <div class="main-panel">
+
         <div class="container">
 
-
-            <div class=" row">
-                <div class=" col-sm-6 text-left">
-                    <h2 class=" card-title">SCENARIO LIST</h2>
-                </div>
-            </div>
-    
-        </div>
-        <div class="container">
-    
             <div class=" content">
                 <div class=" row">
                     <div class=" col-md-12">
                         <div class=" card">
                             <div class=" card-header">
-                                <h4 class=" card-title">Scenarios</h4>
-                                <button class = "btn btn-light" (click)="open(content)">Add Scenario</button>
+                                <h2 class=" card-title text-center">Scenarios</h2>
+                                
                             </div>
                             <div class=" card-body">
-                                <div class=" table-responsive">
-                                    <table class=" table tablesorter" id="">
+                                <div class=" table-full-width table-responsive">
+                                    <table class=" table" id="">
                                         <thead class=" text-primary">
                                             <tr>
-                                                
+
                                                 <th>Scenario</th>
-                                                <th>Name</th>
-                                                
-                                                
-                                                
+                                                <th>Version</th>
+                                                <th>Last Updated</th>
+
+
+                                                <th>
+                                                    <a href="javascript:;" routerLinkActive="active" data-target="#myModal" (click)="open(content)">
+
+                                                    New Scenario
+                                  
+                                                  </a>
+                                                </th>
+
+
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr *ngFor="let scn of scenarios.scenarios">
-                                                <td>{{scn.scn_id}}.{{scn.version}}</td>
-                                                <td>{{scn.name}}</td>
-                                                
-                                                <td class=" text-center"><button class = "btn btn-light" (click)="viewScn(scn.scn_id,scn.version,scn.name)"[routerLink]="['dashboard']">View</button></td>
+                                                <td>
+
+                                                    <a href="javascript:;" 
+                                                       routerLinkActive="active" 
+                                                       (click)="viewScn(scn.scn_id,scn.version,scn.name)"
+                                                        [routerLink]="['dashboard']"
+                                                       >
+                                                        {{scn.scn_id}}: {{scn.name}}
+                                                    </a >
+                                                </td>
+                                                <td>{{scn.version}}</td>
+                                                <td>Jan 29, 2023</td>
+                                                <td></td>
+<!-- 
+                                                <td class=" text-center"><button class="btn btn-light"
+                                                        >View</button></td> -->
                                             </tr>
-                                           
+
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
-    
+
         </div>
     </div>
-    <ng-template #content let-modal >
-       
+    <ng-template #content let-modal>
+        <div class="modal-content">
+
+
             <div class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Create Scenario</h4>
-                <button type="button" class="btn btn-warning" (click)="modal.dismiss('Cross click')">X</button>
-            </div>
-            <div class="modal-body">
-                
-                
-                    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-                        
-                        <div clas = "input-group">
-                            <label for ="id" ></label>
-                            <input name="id" class = "form-control" ngModel required #first="ngModel">
-                        </div>
-                        <div clas = "input-group">
-
-                            <label for ="name" ></label>
-                            <input name="name" ngModel>
-                            
-                        </div>
-                        <div clas = "input-group">
-                            <button>Submit</button>
-                        </div>
-                        
-                      </form>
-                
+                <button type="button" class="btn btn-warning" (click)="modal.dismiss('Cross click')"><i
+                        class="tim-icons icon-simple-remove"> </i></button>
             </div>
 
-        
-        
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                <div class="modal-body">
+
+
+                    <div clas="input-group">
+                        <label for="id">Scenario ID</label>
+                        <input name="id" class="form-control" ngModel required #first="ngModel" type="number"
+                            style="color:black">
+                    </div>
+                    <div clas="input-group">
+
+                        <label for="name">Scenario Name</label>
+                        <input name="name" class="form-control" ngModel required #first="ngModel" type="text"
+                            style="color:black">
+
+                    </div>
+
+                  
+
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <div clas="input-group">
+                        <button type="submit" 
+                                class = "btn btn-primary" 
+                                (click)="modal.dismiss('Cross click')">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </ng-template>
-    
-    <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-    
-    <hr />
-    
-    <pre>{{ closeResult }}</pre>
-    
+
+
+
+
+
 </body>
