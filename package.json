@@ -10,10 +10,6 @@
     "lint": "ng lint",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/black-dashboard-angular.git"
-  },
   "author": "Hari",
   "license": "MIT",
   "private": false,
