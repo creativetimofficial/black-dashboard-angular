@@ -3,7 +3,7 @@
     <div class=" navbar-wrapper">
       <div class=" navbar-toggle d-inline">
         <button class=" navbar-toggler" type="button" (click)="sidebarToggle()">
-          <span class=" navbar-toggler-bar bar1"> </span>
+          <span class=" navbar-toggler-bar bar1"> Hello</span>
           <span class=" navbar-toggler-bar bar2"> </span>
           <span class=" navbar-toggler-bar bar3"> </span>
         </button>
@@ -25,18 +25,6 @@
     </button>
     <div class=" navbar-collapse" [ngbCollapse]="isCollapsed" id="navigation">
       <ul class=" navbar-nav ml-auto">
-        <li class=" search-bar input-group">
-          <button
-            class=" btn btn-link"
-            data-target="#searchModal"
-            data-toggle="modal"
-            (click)="open(content)"
-            id="search-button"
-          >
-            <i class=" tim-icons icon-zoom-split"> </i>
-            <span class=" d-lg-none d-md-block"> Search </span>
-          </button>
-        </li>
         <li class=" nav-item" ngbDropdown>
           <a
             class=" nav-link"
@@ -114,24 +102,3 @@
   </div>
 </nav>
 
-<ng-template #content let-modal>
-  <div class=" modal-header">
-    <input
-      class=" form-control"
-      id="inlineFormInputGroup"
-      placeholder="SEARCH"
-      type="text"
-    />
-
-    <button
-      aria-label="Close"
-      class=" close"
-      data-dismiss="modal"
-      type="button"
-      (click)="modal.dismiss('Cross click')"
-    >
-      <i class=" tim-icons icon-simple-remove"> </i>
-    </button>
-  </div>
-
-</ng-template>
