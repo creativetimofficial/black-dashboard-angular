@@ -1,5 +1,46 @@
-<div class="content">
-    <p class="text" (click)="printConsole()">offers works!</p>
+<div class="content mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="prompt"
+        placeholder="Enter a prompt"
+      />
+    </div>
+    <div class="col-md-2">
+      <button class="btn custom-button" (click)="generateCards()">
+        Generate
+      </button>
+    </div>
+  </div>
+
+  <div class="row mt-4" *ngIf="cards.length > 0">
+    <div class="col-md-4" *ngFor="let card of cards">
+      <div class="card" >
+        <img
+          class="card-img-top"
+          [src]="card.image"
+          alt="Card image cap"
+          height="230px"
+        />
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 20px; font-weight: bold">
+            {{ card.title }}
+          </h5>
+          <p class="card-text">{{ card.content }}</p>
+          <div class="d-flex justify-content-end">
+            <button class="btn custom-button" (click)="open()">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center" *ngIf="cardsGenerated">
+      <button class="btn custom-button" (click)="generateCards()">Regenerate Response</button>
+  </div>
 </div>
+
 
 

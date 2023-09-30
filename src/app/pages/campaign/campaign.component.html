@@ -1,0 +1,21 @@
+<div class=" content row mt-4" *ngIf="cards.length > 0"  >
+    <div class="col-md-12" *ngFor="let card of cards" style="padding: 0px 20px;">
+      <div class="card horizontal-card">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <img class="card-img" [src]="card.image" alt="Card image" height="auto" />
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: 20px; font-weight: bold">{{ card.title }}</h5>
+              <p class="card-text">{{ card.content}}</p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <button class="btn custom-button" (click)="repost()">Repost</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

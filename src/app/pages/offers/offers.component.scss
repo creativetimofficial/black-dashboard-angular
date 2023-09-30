@@ -1,3 +1,37 @@
-.text {
-    color: red;
-}
+/* Add the background color and font color for the modal */
+.modal-header, .modal-footer, .modal-body {
+    background-color: #1d1d2c;
+    color: white;
+  }
+  
+  /* Style for the social media icons */
+  .share-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add margin to separate from the header */
+  }
+  
+  .share-icon {
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 34px;
+    transition: transform 0.2s ease;
+    color: #f74e70; /* Icon color */
+  }
+  
+  .share-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .share-icon.selected {
+    color: green;
+  }
+  
+  .custom-button {
+    background-color: #f74e70 !important;
+    border-color: #f74e70;
+    color: white; /* Optional: Set text color */
+  }
+  .modal-body{
+    border: "2px solid #f74e70 " ;
+  }
